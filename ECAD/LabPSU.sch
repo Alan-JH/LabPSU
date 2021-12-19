@@ -162,9 +162,7 @@ Wire Wire Line
 	4650 2050 4200 2050
 Connection ~ 4200 2050
 Wire Wire Line
-	4650 3850 5450 3850
-Wire Wire Line
-	5550 3850 5650 3850
+	4650 3950 5450 3950
 $Comp
 L Regulator_Switching:LM5118MH U?
 U 1 1 61BB989F
@@ -176,8 +174,6 @@ F 3 "https://www.ti.com/lit/ds/symlink/lm5118.pdf" H 7550 2700 50  0001 C CNN
 	1    5550 3150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4650 2050 4650 3850
 Connection ~ 4650 2050
 Wire Wire Line
 	4650 1750 5050 1750
@@ -205,4 +201,50 @@ Wire Wire Line
 	5050 2300 5050 2650
 Text Notes 5200 1300 0    50   ~ 0
 Variable regulator
+$Comp
+L Device:R R?
+U 1 1 61C0F85E
+P 4450 3800
+F 0 "R?" H 4500 3800 50  0000 L CNN
+F 1 "18.2K" V 4450 3700 50  0000 L CNN
+F 2 "" V 4380 3800 50  0001 C CNN
+F 3 "~" H 4450 3800 50  0001 C CNN
+	1    4450 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 3650 5050 3650
+Wire Wire Line
+	5450 3950 5450 3850
+Wire Wire Line
+	4650 2050 4650 3950
+Wire Wire Line
+	4450 3950 4650 3950
+Connection ~ 4650 3950
+Wire Wire Line
+	5550 3850 5550 3950
+Wire Wire Line
+	5550 3950 5650 3950
+Wire Wire Line
+	5650 3950 5650 3850
+$Comp
+L Device:C C?
+U 1 1 61C13AAB
+P 4000 3600
+F 0 "C?" H 4115 3646 50  0000 L CNN
+F 1 "0.1uF" H 4115 3555 50  0000 L CNN
+F 2 "" H 4038 3450 50  0001 C CNN
+F 3 "~" H 4000 3600 50  0001 C CNN
+	1    4000 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 3450 5050 3450
+Wire Wire Line
+	4000 3750 4000 3950
+Wire Wire Line
+	4000 3950 4450 3950
+Connection ~ 4450 3950
+NoConn ~ 5050 2950
+NoConn ~ 5050 2850
 $EndSCHEMATC
