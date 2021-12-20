@@ -186,7 +186,7 @@ F 3 "~" H 4900 2600 50  0001 C CNN
 	1    4900 2600
 	1    0    0    -1  
 $EndComp
-Text Notes 5200 1300 0    50   ~ 0
+Text Notes 5200 2250 0    50   ~ 0
 Variable regulator
 $Comp
 L Device:R R?
@@ -226,7 +226,7 @@ Wire Wire Line
 Connection ~ 4450 3950
 NoConn ~ 5050 2950
 NoConn ~ 5050 2850
-Text Notes 4400 4250 0    50   ~ 0
+Text Notes 3900 4250 0    50   ~ 0
 Rt = (6.4e9 / f) - 3.02e3
 $Comp
 L Device:C C?
@@ -239,7 +239,7 @@ F 3 "~" H 4100 3700 50  0001 C CNN
 	1    4100 3700
 	1    0    0    -1  
 $EndComp
-Text Notes 3600 4400 0    50   ~ 0
+Text Notes 3200 3250 0    50   ~ 0
 Cramp = Le-6 / 2Rsense
 Wire Wire Line
 	4100 3850 4100 3950
@@ -643,4 +643,243 @@ Wire Wire Line
 	6850 3950 7350 3950
 Wire Wire Line
 	6850 3450 6850 3950
+$Comp
+L Regulator_Switching:MAX5035EUSA U?
+U 1 1 61C02952
+P 3650 5300
+F 0 "U?" H 3650 5767 50  0000 C CNN
+F 1 "MAX5035EUSA" H 3650 5676 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3800 4950 50  0001 L CIN
+F 3 "http://datasheets.maximintegrated.com/en/ds/MAX5035.pdf" H 3650 5250 50  0001 C CNN
+	1    3650 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61C03CD5
+P 2800 4950
+F 0 "C?" H 2918 4996 50  0000 L CNN
+F 1 "68uF" H 2918 4905 50  0000 L CNN
+F 2 "" H 2838 4800 50  0001 C CNN
+F 3 "~" H 2800 4950 50  0001 C CNN
+	1    2800 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61C0B7DC
+P 2450 5400
+F 0 "R?" H 2500 5400 50  0000 L CNN
+F 1 "150K" V 2450 5400 50  0000 C CNN
+F 2 "" V 2380 5400 50  0001 C CNN
+F 3 "~" H 2450 5400 50  0001 C CNN
+	1    2450 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61C0C02A
+P 2450 5000
+F 0 "R?" H 2500 5000 50  0000 L CNN
+F 1 "1M" V 2450 5000 50  0000 C CNN
+F 2 "" V 2380 5000 50  0001 C CNN
+F 3 "~" H 2450 5000 50  0001 C CNN
+	1    2450 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 5150 2450 5200
+Text Notes 700  5100 0    50   ~ 0
+Around 14V undervoltage lockout\nUVLO = 1.85V * (Rtop/Rbottom + 1)
+Connection ~ 2450 5200
+Wire Wire Line
+	2450 5200 2450 5250
+Wire Wire Line
+	3250 5100 3250 4800
+Wire Wire Line
+	3250 4800 2800 4800
+Wire Wire Line
+	2450 4800 2450 4850
+Connection ~ 2800 4800
+Wire Wire Line
+	2800 4800 2450 4800
+$Comp
+L Device:C C?
+U 1 1 61C1B7F5
+P 3050 5700
+F 0 "C?" H 3165 5746 50  0000 L CNN
+F 1 "0.1uF" H 3165 5655 50  0000 L CNN
+F 2 "" H 3088 5550 50  0001 C CNN
+F 3 "~" H 3050 5700 50  0001 C CNN
+	1    3050 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 5500 3250 5500
+Wire Wire Line
+	3750 5900 3550 5900
+Connection ~ 3550 5900
+$Comp
+L Device:C_Small C?
+U 1 1 61C3114D
+P 4200 5200
+F 0 "C?" H 4292 5246 50  0000 L CNN
+F 1 "0.1uF" H 4292 5155 50  0000 L CNN
+F 2 "" H 4200 5200 50  0001 C CNN
+F 3 "~" H 4200 5200 50  0001 C CNN
+	1    4200 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 5100 4200 5100
+Wire Wire Line
+	4050 5300 4200 5300
+$Comp
+L Device:L L?
+U 1 1 61C38B82
+P 4650 5300
+F 0 "L?" V 4840 5300 50  0000 C CNN
+F 1 "220uH" V 4749 5300 50  0000 C CNN
+F 2 "" H 4650 5300 50  0001 C CNN
+F 3 "~" H 4650 5300 50  0001 C CNN
+	1    4650 5300
+	0    -1   -1   0   
+$EndComp
+Connection ~ 4200 5300
+$Comp
+L Device:D_Schottky D?
+U 1 1 61C3D709
+P 4350 5500
+F 0 "D?" V 4304 5580 50  0000 L CNN
+F 1 "SB5H100" V 4395 5580 50  0000 L CNN
+F 2 "" H 4350 5500 50  0001 C CNN
+F 3 "~" H 4350 5500 50  0001 C CNN
+	1    4350 5500
+	0    1    1    0   
+$EndComp
+Connection ~ 3750 5900
+$Comp
+L power:VBUS #PWR?
+U 1 1 61C50A3A
+P 2800 4800
+F 0 "#PWR?" H 2800 4650 50  0001 C CNN
+F 1 "VBUS" H 2815 4973 50  0000 C CNN
+F 2 "" H 2800 4800 50  0001 C CNN
+F 3 "" H 2800 4800 50  0001 C CNN
+	1    2800 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61C554B4
+P 3750 5900
+F 0 "#PWR?" H 3750 5650 50  0001 C CNN
+F 1 "GND" H 3755 5727 50  0000 C CNN
+F 2 "" H 3750 5900 50  0001 C CNN
+F 3 "" H 3750 5900 50  0001 C CNN
+	1    3750 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 5300 5250 5300
+Connection ~ 5150 5300
+Wire Wire Line
+	4800 5300 4850 5300
+$Comp
+L Device:CP C?
+U 1 1 61C4B121
+P 5150 5450
+F 0 "C?" H 5268 5496 50  0000 L CNN
+F 1 "15uF" H 5268 5405 50  0000 L CNN
+F 2 "" H 5188 5300 50  0001 C CNN
+F 3 "~" H 5150 5450 50  0001 C CNN
+	1    5150 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61C5F09C
+P 4850 5450
+F 0 "R?" H 4900 5450 50  0000 L CNN
+F 1 "72K" V 4850 5450 50  0000 C CNN
+F 2 "" V 4780 5450 50  0001 C CNN
+F 3 "~" H 4850 5450 50  0001 C CNN
+	1    4850 5450
+	1    0    0    -1  
+$EndComp
+Connection ~ 4850 5300
+Wire Wire Line
+	4850 5300 5150 5300
+$Comp
+L Device:R R?
+U 1 1 61C5FD43
+P 4850 5750
+F 0 "R?" H 4900 5750 50  0000 L CNN
+F 1 "10K" V 4850 5750 50  0000 C CNN
+F 2 "" V 4780 5750 50  0001 C CNN
+F 3 "~" H 4850 5750 50  0001 C CNN
+	1    4850 5750
+	1    0    0    -1  
+$EndComp
+Connection ~ 4850 5900
+Wire Wire Line
+	4850 5900 5150 5900
+Wire Wire Line
+	2450 5550 2450 5900
+Wire Wire Line
+	3050 5500 3050 5550
+Wire Wire Line
+	3050 5850 3050 5900
+Connection ~ 3050 5900
+Wire Wire Line
+	3050 5900 3550 5900
+Wire Wire Line
+	3550 5700 3550 5900
+Wire Wire Line
+	3750 5700 3750 5900
+Wire Wire Line
+	5150 5600 5150 5900
+Wire Wire Line
+	3750 5900 4350 5900
+Wire Wire Line
+	4200 5300 4350 5300
+Wire Wire Line
+	4350 5350 4350 5300
+Connection ~ 4350 5300
+Wire Wire Line
+	4350 5300 4500 5300
+Wire Wire Line
+	4350 5650 4350 5900
+Connection ~ 4350 5900
+Wire Wire Line
+	4350 5900 4850 5900
+Wire Wire Line
+	4850 5600 4050 5600
+Wire Wire Line
+	4050 5600 4050 5500
+Connection ~ 4850 5600
+Text Notes 4450 6150 0    50   ~ 0
+Rbottom < 15K\nRtop = Rbottom * (Vout - 1.22)/1.22
+Wire Wire Line
+	2450 5200 3250 5200
+Wire Wire Line
+	2450 5900 2800 5900
+Wire Wire Line
+	2800 5100 2800 5900
+Connection ~ 2800 5900
+Wire Wire Line
+	2800 5900 3050 5900
+$Comp
+L power:+10V #PWR?
+U 1 1 61CCBDF9
+P 5250 5300
+F 0 "#PWR?" H 5250 5150 50  0001 C CNN
+F 1 "+10V" H 5265 5473 50  0000 C CNN
+F 2 "" H 5250 5300 50  0001 C CNN
+F 3 "" H 5250 5300 50  0001 C CNN
+	1    5250 5300
+	1    0    0    -1  
+$EndComp
+Text Notes 3300 4650 0    50   ~ 0
+Fixed 10V regulator
 $EndSCHEMATC
