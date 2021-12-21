@@ -186,7 +186,7 @@ F 3 "~" H 4900 2600 50  0001 C CNN
 	1    4900 2600
 	1    0    0    -1  
 $EndComp
-Text Notes 5200 1300 0    50   ~ 0
+Text Notes 5200 2250 0    50   ~ 0
 Variable regulator
 $Comp
 L Device:R R?
@@ -612,10 +612,8 @@ F 3 "~" H 9550 3100 50  0001 C CNN
 	1    9550 3100
 	1    0    0    -1  
 $EndComp
-Text GLabel 9900 2850 2    50   Input ~ 0
+Text GLabel 10100 2850 2    50   Input ~ 0
 VOUT
-Wire Wire Line
-	9550 2850 9900 2850
 Text Notes 9750 3400 0    50   ~ 0
 Rtop/Rbottom = Vout/1.23V - 1
 Connection ~ 9550 3550
@@ -878,6 +876,56 @@ F 1 "+10V" H 5265 5473 50  0000 C CNN
 F 2 "" H 5250 5300 50  0001 C CNN
 F 3 "" H 5250 5300 50  0001 C CNN
 	1    5250 5300
+	1    0    0    -1  
+$EndComp
+Text Notes 3300 4650 0    50   ~ 0
+Fixed 10V regulator
+$Comp
+L Device:R R?
+U 1 1 61C130DF
+P 9850 2850
+F 0 "R?" V 9750 2850 50  0000 C CNN
+F 1 "10m" V 9850 2850 50  0000 C CNN
+F 2 "" V 9780 2850 50  0001 C CNN
+F 3 "~" H 9850 2850 50  0001 C CNN
+	1    9850 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9700 2850 9550 2850
+Wire Wire Line
+	10100 2850 10000 2850
+$Comp
+L Amplifier_Current:LT6106 U?
+U 1 1 61C2B752
+P 10350 2300
+F 0 "U?" H 10694 2346 50  0000 L CNN
+F 1 "LT6106" H 10694 2255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 10350 2300 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/6106fb.pdf" H 10400 2500 50  0001 C CNN
+	1    10350 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Potentiometer_Digital:AD5272BRM U?
+U 1 1 61C321DA
+P 11250 4150
+F 0 "U?" H 11250 4831 50  0000 C CNN
+F 1 "AD5272BRM" H 11250 4740 50  0000 C CNN
+F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 12000 3700 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD5272_5274.pdf" H 11250 4150 50  0001 C CNN
+	1    11250 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog_DAC:MCP4811 U?
+U 1 1 61C336A7
+P 9400 1400
+F 0 "U?" H 10044 1446 50  0000 L CNN
+F 1 "MCP4811" H 10044 1355 50  0000 L CNN
+F 2 "" H 10300 1300 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/22244B.pdf" H 10300 1300 50  0001 C CNN
+	1    9400 1400
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
