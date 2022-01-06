@@ -621,17 +621,6 @@ Wire Wire Line
 	9700 3550 9550 3550
 Wire Wire Line
 	9700 3400 9700 3550
-$Comp
-L Device:R_POT RV?
-U 1 1 61C94316
-P 9550 3400
-F 0 "RV?" H 9500 3400 50  0000 R CNN
-F 1 "50K" V 9550 3450 50  0000 R CNN
-F 2 "" H 9550 3400 50  0001 C CNN
-F 3 "~" H 9550 3400 50  0001 C CNN
-	1    9550 3400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6050 2950 7050 2950
 Wire Wire Line
@@ -907,25 +896,25 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/6106fb.
 	1    0    0    -1  
 $EndComp
 $Comp
-L Potentiometer_Digital:AD5272BRM U?
-U 1 1 61C321DA
-P 11250 4150
-F 0 "U?" H 11250 4831 50  0000 C CNN
-F 1 "AD5272BRM" H 11250 4740 50  0000 C CNN
-F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 12000 3700 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD5272_5274.pdf" H 11250 4150 50  0001 C CNN
-	1    11250 4150
+L Device:R_POT_Dual_Separate RV1
+U 1 1 61D78DDD
+P 9550 3400
+F 0 "RV1" H 9500 3400 50  0000 R CNN
+F 1 "50K" V 9550 3400 50  0000 C CNN
+F 2 "" H 9550 3400 50  0001 C CNN
+F 3 "~" H 9550 3400 50  0001 C CNN
+	1    9550 3400
 	1    0    0    -1  
 $EndComp
 $Comp
-L Analog_DAC:MCP4811 U?
-U 1 1 61C336A7
-P 9400 1400
-F 0 "U?" H 10044 1446 50  0000 L CNN
-F 1 "MCP4811" H 10044 1355 50  0000 L CNN
-F 2 "" H 10300 1300 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/22244B.pdf" H 10300 1300 50  0001 C CNN
-	1    9400 1400
+L Device:R_POT_Dual_Separate RV1
+U 2 1 61D795D0
+P 10100 3800
+F 0 "RV1" H 10050 3800 50  0000 R CNN
+F 1 "50K" V 10100 3800 50  0000 C CNN
+F 2 "" H 10100 3800 50  0001 C CNN
+F 3 "~" H 10100 3800 50  0001 C CNN
+	2    10100 3800
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
