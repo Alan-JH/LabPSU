@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Amplifier_Current_INA285
+# Amplifier_Current_INA286
 #
-DEF Amplifier_Current_INA285 U 0 5 Y Y 1 F N
+DEF Amplifier_Current_INA286 U 0 5 Y Y 1 F N
 F0 "U" 150 150 50 H V L CNN
-F1 "Amplifier_Current_INA285" 150 -100 50 H V L CNN
+F1 "Amplifier_Current_INA286" 150 -100 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 ALIAS INA283 INA284 INA285 INA286
@@ -247,6 +247,27 @@ X 6 6 0 -150 50 U 50 50 2 1 P
 ENDDRAW
 ENDDEF
 #
+# Regulator_Linear_L7805
+#
+DEF Regulator_Linear_L7805 U 0 10 Y Y 1 F N
+F0 "U" -150 125 50 H V C CNN
+F1 "Regulator_Linear_L7805" 0 125 50 H V L CNN
+F2 "" 25 -150 50 H I L CIN
+F3 "" 0 -50 50 H I C CNN
+ALIAS L7806 L7808 L7885 L7809 L7812 L7815 L7818 L7824
+$FPLIST
+ TO?252*
+ TO?263*
+ TO?220*
+$ENDFPLIST
+DRAW
+S -200 75 200 -200 0 1 10 f
+X IN 1 -300 0 100 R 50 50 1 1 W
+X GND 2 0 -300 100 U 50 50 1 1 W
+X OUT 3 300 0 100 L 50 50 1 1 w
+ENDDRAW
+ENDDEF
+#
 # Regulator_Switching_LM5118MH
 #
 DEF Regulator_Switching_LM5118MH U 0 20 Y Y 1 F N
@@ -341,18 +362,33 @@ X D 5 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# power_+10V
+# power_+12V
 #
-DEF power_+10V #PWR 0 0 Y Y 1 F P
+DEF power_+12V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+10V" 0 140 50 H V C CNN
+F1 "power_+12V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
 P 2 0 1 0 -30 50 0 100 N
 P 2 0 1 0 0 0 0 100 N
 P 2 0 1 0 0 100 30 50 N
-X +10V 1 0 0 0 U 50 50 1 1 W N
+X +12V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_+5V
+#
+DEF power_+5V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_+5V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
