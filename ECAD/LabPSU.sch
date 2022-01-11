@@ -1270,4 +1270,6 @@ F 3 "" H 8500 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 8500 3000
+Text GLabel 9350 3300 2    50   Input ~ 0
+IOUT
 $EndSCHEMATC
