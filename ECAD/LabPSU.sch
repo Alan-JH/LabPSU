@@ -489,12 +489,12 @@ Connection ~ 5550 3750
 $Comp
 L Device:R R?
 U 1 1 61C561C4
-P 10300 5500
-F 0 "R?" H 10150 5500 50  0000 L CNN
-F 1 "70K" V 10300 5500 50  0000 C CNN
-F 2 "" V 10230 5500 50  0001 C CNN
-F 3 "~" H 10300 5500 50  0001 C CNN
-	1    10300 5500
+P 11600 4100
+F 0 "R?" H 11550 4100 50  0000 R CNN
+F 1 "80K" V 11600 4100 50  0000 C CNN
+F 2 "" V 11530 4100 50  0001 C CNN
+F 3 "~" H 11600 4100 50  0001 C CNN
+	1    11600 4100
 	1    0    0    -1  
 $EndComp
 Text GLabel 10450 2950 2    50   Input ~ 0
@@ -555,50 +555,17 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 61F1D569
-P 10300 5800
-F 0 "R?" H 10150 5800 50  0000 L CNN
-F 1 "10K" V 10300 5800 50  0000 C CNN
-F 2 "" V 10230 5800 50  0001 C CNN
-F 3 "~" H 10300 5800 50  0001 C CNN
-	1    10300 5800
+P 11600 4400
+F 0 "R?" H 11550 4400 50  0000 R CNN
+F 1 "10K" V 11600 4400 50  0000 C CNN
+F 2 "" V 11530 4400 50  0001 C CNN
+F 3 "~" H 11600 4400 50  0001 C CNN
+	1    11600 4400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9450 4050 9750 4050
-$Comp
-L Amplifier_Operational:LM358 U1
-U 1 1 61D8C146
-P 13150 5000
-F 0 "U1" H 13150 4633 50  0000 C CNN
-F 1 "LM358" H 13150 4724 50  0000 C CNN
-F 2 "" H 13150 5000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 13150 5000 50  0001 C CNN
-	1    13150 5000
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:LM358 U1
-U 2 1 61D8D237
-P 14000 5050
-F 0 "U1" H 14000 4683 50  0000 C CNN
-F 1 "LM358" H 14000 4774 50  0000 C CNN
-F 2 "" H 14000 5050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 14000 5050 50  0001 C CNN
-	2    14000 5050
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:LM358 U1
-U 3 1 61D8E0F1
-P 12450 5150
-F 0 "U1" H 12408 5196 50  0000 L CNN
-F 1 "LM358" H 12408 5105 50  0000 L CNN
-F 2 "" H 12450 5150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 12450 5150 50  0001 C CNN
-	3    12450 5150
-	1    0    0    -1  
-$EndComp
-Text Label 11400 5900 0    50   ~ 0
+Text Label 12500 5500 2    50   ~ 0
 FB
 Text Label 6450 3650 2    50   ~ 0
 FB
@@ -857,12 +824,12 @@ Connection ~ 9450 3150
 $Comp
 L power:+5V #PWR0110
 U 1 1 620A12B9
-P 12350 4850
-F 0 "#PWR0110" H 12350 4700 50  0001 C CNN
-F 1 "+5V" H 12365 5023 50  0000 C CNN
-F 2 "" H 12350 4850 50  0001 C CNN
-F 3 "" H 12350 4850 50  0001 C CNN
-	1    12350 4850
+P 13200 3950
+F 0 "#PWR0110" H 13200 3800 50  0001 C CNN
+F 1 "+5V" H 13215 4123 50  0000 C CNN
+F 2 "" H 13200 3950 50  0001 C CNN
+F 3 "" H 13200 3950 50  0001 C CNN
+	1    13200 3950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1208,48 +1175,275 @@ F 3 "" H 2350 5950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 2350 5950
-$Comp
-L MCU_Microchip_ATtiny:ATtiny1604-SS U?
-U 1 1 62081DA2
-P 9250 5550
-F 0 "U?" H 9300 6300 50  0000 L CNN
-F 1 "ATtiny1604-SS" H 9300 6200 50  0000 L CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9250 5550 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny804_1604-Data-Sheet-40002028A.pdf" H 9250 5550 50  0001 C CNN
-	1    9250 5550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9850 3450 10450 3450
 $Comp
-L Analog_DAC:MCP4812 U?
-U 1 1 620AE9B8
-P 10900 6000
-F 0 "U?" H 10900 6581 50  0000 C CNN
-F 1 "MCP4812" H 10900 6490 50  0000 C CNN
-F 2 "" H 11700 5700 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20002249B.pdf" H 11700 5700 50  0001 C CNN
-	1    10900 6000
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR?
 U 1 1 620CB1D3
-P 9250 4850
-F 0 "#PWR?" H 9250 4700 50  0001 C CNN
-F 1 "+5V" H 9265 5023 50  0000 C CNN
-F 2 "" H 9250 4850 50  0001 C CNN
-F 3 "" H 9250 4850 50  0001 C CNN
-	1    9250 4850
+P 9250 5100
+F 0 "#PWR?" H 9250 4950 50  0001 C CNN
+F 1 "+5V" H 9265 5273 50  0000 C CNN
+F 2 "" H 9250 5100 50  0001 C CNN
+F 3 "" H 9250 5100 50  0001 C CNN
+	1    9250 5100
 	1    0    0    -1  
 $EndComp
-Text GLabel 9850 5250 2    50   Input ~ 0
+Text GLabel 10450 4250 0    50   Input ~ 0
 IOUT
-Text GLabel 10300 5350 2    50   Input ~ 0
+Text GLabel 11600 3950 0    50   Input ~ 0
 VOUT
 Wire Wire Line
 	9200 2950 9950 2950
 Wire Wire Line
 	9950 2950 10450 2950
 Connection ~ 9950 2950
+$Comp
+L power:GND #PWR?
+U 1 1 62036EDF
+P 13200 4550
+F 0 "#PWR?" H 13200 4300 50  0001 C CNN
+F 1 "GND" H 13205 4377 50  0000 C CNN
+F 2 "" H 13200 4550 50  0001 C CNN
+F 3 "" H 13200 4550 50  0001 C CNN
+	1    13200 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 5400 10100 5400
+Text Label 10100 5400 2    50   ~ 0
+UPDI
+Connection ~ 11600 4250
+$Comp
+L power:GND #PWR?
+U 1 1 6209C4FC
+P 11600 4550
+F 0 "#PWR?" H 11600 4300 50  0001 C CNN
+F 1 "GND" H 11605 4377 50  0000 C CNN
+F 2 "" H 11600 4550 50  0001 C CNN
+F 3 "" H 11600 4550 50  0001 C CNN
+	1    11600 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6209D223
+P 9250 6500
+F 0 "#PWR?" H 9250 6250 50  0001 C CNN
+F 1 "GND" H 9255 6327 50  0000 C CNN
+F 2 "" H 9250 6500 50  0001 C CNN
+F 3 "" H 9250 6500 50  0001 C CNN
+	1    9250 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U?
+U 1 1 620D2AA0
+P 12350 4350
+F 0 "U?" H 12350 4717 50  0000 C CNN
+F 1 "LM358" H 12350 4626 50  0000 C CNN
+F 2 "" H 12350 4350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 12350 4350 50  0001 C CNN
+	1    12350 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U?
+U 2 1 620D4FED
+P 10750 4350
+F 0 "U?" H 10750 4717 50  0000 C CNN
+F 1 "LM358" H 10750 4626 50  0000 C CNN
+F 2 "" H 10750 4350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 10750 4350 50  0001 C CNN
+	2    10750 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U?
+U 3 1 620D5CAB
+P 13300 4250
+F 0 "U?" H 13258 4296 50  0000 L CNN
+F 1 "LM358" H 13258 4205 50  0000 L CNN
+F 2 "" H 13300 4250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 13300 4250 50  0001 C CNN
+	3    13300 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11600 4250 12050 4250
+Wire Wire Line
+	12050 4450 12050 4650
+Wire Wire Line
+	12050 4650 12650 4650
+Wire Wire Line
+	12650 4650 12650 4350
+Wire Wire Line
+	10450 4450 10450 4650
+Wire Wire Line
+	10450 4650 11050 4650
+Wire Wire Line
+	11050 4650 11050 4350
+Wire Wire Line
+	10100 5700 9850 5700
+Text Label 10100 5700 2    50   ~ 0
+SCK
+Wire Wire Line
+	9850 5500 10100 5500
+Text Label 10100 5500 2    50   ~ 0
+MOSI
+$Comp
+L Analog_DAC:MCP4811 U?
+U 1 1 62167D22
+P 11550 5500
+F 0 "U?" H 12194 5546 50  0000 L CNN
+F 1 "MCP4811" H 12194 5455 50  0000 L CNN
+F 2 "" H 12450 5400 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/22244B.pdf" H 12450 5400 50  0001 C CNN
+	1    11550 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12150 5500 12500 5500
+Wire Wire Line
+	10800 5600 11050 5600
+Text Label 10800 5600 0    50   ~ 0
+SCK
+Wire Wire Line
+	11050 5700 10800 5700
+Text Label 10800 5700 0    50   ~ 0
+MOSI
+Wire Wire Line
+	11050 5500 10800 5500
+Text Label 10800 5500 0    50   ~ 0
+CS
+Wire Wire Line
+	11050 5400 10800 5400
+Text Label 10800 5400 0    50   ~ 0
+LDAC
+Wire Wire Line
+	9850 5800 10100 5800
+Text Label 10100 5800 2    50   ~ 0
+CS
+Wire Wire Line
+	9850 5900 10100 5900
+Text Label 10100 5900 2    50   ~ 0
+LDAC
+Wire Wire Line
+	11550 5100 10650 5100
+Connection ~ 9250 5100
+Wire Wire Line
+	11550 6500 11550 5900
+Connection ~ 9250 6500
+$Comp
+L Device:C C?
+U 1 1 621CCCBD
+P 8300 5250
+F 0 "C?" H 8415 5296 50  0000 L CNN
+F 1 "0.1uF" H 8415 5205 50  0000 L CNN
+F 2 "" H 8338 5100 50  0001 C CNN
+F 3 "~" H 8300 5250 50  0001 C CNN
+	1    8300 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 5400 8300 6500
+$Comp
+L Device:C C?
+U 1 1 621E5077
+P 10650 5250
+F 0 "C?" H 10765 5296 50  0000 L CNN
+F 1 "0.1uF" H 10765 5205 50  0000 L CNN
+F 2 "" H 10688 5100 50  0001 C CNN
+F 3 "~" H 10650 5250 50  0001 C CNN
+	1    10650 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10650 5400 10650 6500
+Connection ~ 10650 5100
+Wire Wire Line
+	10650 5100 10250 5100
+Connection ~ 10650 6500
+Wire Wire Line
+	10650 6500 11550 6500
+$Comp
+L Device:C C?
+U 1 1 621EDFA9
+P 7850 5250
+F 0 "C?" H 7965 5296 50  0000 L CNN
+F 1 "10uF" H 7965 5205 50  0000 L CNN
+F 2 "" H 7888 5100 50  0001 C CNN
+F 3 "~" H 7850 5250 50  0001 C CNN
+	1    7850 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 5400 7850 6500
+$Comp
+L Device:C C?
+U 1 1 621F658D
+P 10250 5250
+F 0 "C?" H 10365 5296 50  0000 L CNN
+F 1 "10uF" H 10365 5205 50  0000 L CNN
+F 2 "" H 10288 5100 50  0001 C CNN
+F 3 "~" H 10250 5250 50  0001 C CNN
+	1    10250 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 5400 10250 6500
+Connection ~ 10250 5100
+Connection ~ 10250 6500
+Wire Wire Line
+	10250 6500 10650 6500
+Wire Wire Line
+	8300 6500 7850 6500
+Connection ~ 8300 6500
+Wire Wire Line
+	7850 5100 8300 5100
+Connection ~ 8300 5100
+Text Label 11400 4350 2    50   ~ 0
+IOUTBUF
+Wire Wire Line
+	11050 4350 11400 4350
+Connection ~ 11050 4350
+Text Label 13000 4350 2    50   ~ 0
+VOUTBUF
+Wire Wire Line
+	12650 4350 13000 4350
+Connection ~ 12650 4350
+Text Label 10200 6000 2    50   ~ 0
+IOUTBUF
+Wire Wire Line
+	9850 6000 10200 6000
+Wire Wire Line
+	9250 5100 10250 5100
+Wire Wire Line
+	9250 6500 10250 6500
+Text Label 10200 6100 2    50   ~ 0
+VOUTBUF
+Wire Wire Line
+	9850 6100 10200 6100
+Wire Wire Line
+	8300 6500 9250 6500
+Wire Wire Line
+	9250 5100 8300 5100
+$Comp
+L MCU_Microchip_ATtiny:ATtiny414-SS U?
+U 1 1 62069646
+P 9250 5800
+F 0 "U?" H 9300 6550 50  0000 L CNN
+F 1 "ATtiny414-SS" H 9300 6450 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9250 5800 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40001912A.pdf" H 9250 5800 50  0001 C CNN
+	1    9250 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 5900 7400 5900
+Text Label 7400 5900 2    50   ~ 0
+UPDI
+Text GLabel 8650 5400 0    50   Input ~ 0
+SCL
+Text GLabel 8650 5500 0    50   Input ~ 0
+SDA
 $EndSCHEMATC
