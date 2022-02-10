@@ -1,0 +1,89 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:D_Bridge_+-AA D?
+U 1 1 62057AFD
+P 3000 2950
+F 0 "D?" H 3344 2996 50  0000 L CNN
+F 1 "D_Bridge_+-AA" H 3344 2905 50  0000 L CNN
+F 2 "" H 3000 2950 50  0001 C CNN
+F 3 "~" H 3000 2950 50  0001 C CNN
+	1    3000 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Controller:IR1153S U?
+U 1 1 62058102
+P 4800 4150
+F 0 "U?" H 4800 4831 50  0000 C CNN
+F 1 "IR1153S" H 4800 4740 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4800 4150 50  0001 C CIN
+F 3 "https://www.infineon.com/dgdl/ir1153.pdf?fileId=5546d462533600a4015355c42a5b1649" H 4800 4150 50  0001 C CNN
+	1    4800 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 62058FC8
+P 2150 3000
+F 0 "J?" H 2068 2675 50  0000 C CNN
+F 1 "40VAC" H 2068 2766 50  0000 C CNN
+F 2 "" H 2150 3000 50  0001 C CNN
+F 3 "~" H 2150 3000 50  0001 C CNN
+	1    2150 3000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3000 2650 2500 2650
+Wire Wire Line
+	2500 2650 2500 2900
+Wire Wire Line
+	2500 2900 2350 2900
+Wire Wire Line
+	2350 3000 2500 3000
+Wire Wire Line
+	2500 3000 2500 3250
+Wire Wire Line
+	2500 3250 3000 3250
+Wire Wire Line
+	2700 2950 2700 3500
+$Comp
+L power:GND #PWR?
+U 1 1 6205A908
+P 3300 3500
+F 0 "#PWR?" H 3300 3250 50  0001 C CNN
+F 1 "GND" H 3305 3327 50  0000 C CNN
+F 2 "" H 3300 3500 50  0001 C CNN
+F 3 "" H 3300 3500 50  0001 C CNN
+	1    3300 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 3500 3300 3500
+Wire Wire Line
+	3300 2950 3300 2650
+$Comp
+L power:VCC #PWR?
+U 1 1 6205AED4
+P 3300 2650
+F 0 "#PWR?" H 3300 2500 50  0001 C CNN
+F 1 "VCC" H 3315 2823 50  0000 C CNN
+F 2 "" H 3300 2650 50  0001 C CNN
+F 3 "" H 3300 2650 50  0001 C CNN
+	1    3300 2650
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
