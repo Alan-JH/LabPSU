@@ -83,4 +83,328 @@ F 3 "" H 1850 4100 50  0001 C CNN
 	1    1850 4100
 	1    0    0    -1  
 $EndComp
+$Comp
+L symbols:STM32BluePill U?
+U 1 1 6207166F
+P 5800 2200
+F 0 "U?" H 5800 2365 50  0000 C CNN
+F 1 "STM32BluePill" H 5800 2274 50  0000 C CNN
+F 2 "" H 5800 2200 50  0001 C CNN
+F 3 "" H 5800 2200 50  0001 C CNN
+	1    5800 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 62073199
+P 4750 4000
+F 0 "#PWR?" H 4750 3850 50  0001 C CNN
+F 1 "+5V" H 4765 4173 50  0000 C CNN
+F 2 "" H 4750 4000 50  0001 C CNN
+F 3 "" H 4750 4000 50  0001 C CNN
+	1    4750 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 4000 5300 4000
+Wire Wire Line
+	6300 2400 6300 2300
+Wire Wire Line
+	6300 2300 6500 2300
+Connection ~ 6300 2300
+$Comp
+L power:GND #PWR?
+U 1 1 62074061
+P 6500 2300
+F 0 "#PWR?" H 6500 2050 50  0001 C CNN
+F 1 "GND" H 6505 2127 50  0000 C CNN
+F 2 "" H 6500 2300 50  0001 C CNN
+F 3 "" H 6500 2300 50  0001 C CNN
+	1    6500 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6207489A
+P 5100 4100
+F 0 "#PWR?" H 5100 3850 50  0001 C CNN
+F 1 "GND" H 5105 3927 50  0000 C CNN
+F 2 "" H 5100 4100 50  0001 C CNN
+F 3 "" H 5100 4100 50  0001 C CNN
+	1    5100 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4100 5300 4100
+Text GLabel 6300 3300 2    50   Input ~ 0
+M_SCK
+Text GLabel 6300 3100 2    50   Input ~ 0
+M_MOSI
+Text GLabel 4700 2400 0    50   Input ~ 0
+EN
+$Comp
+L Transistor_FET:2N7002 Q?
+U 1 1 620751F6
+P 4800 2700
+F 0 "Q?" H 5005 2746 50  0000 L CNN
+F 1 "2N7002" H 5005 2655 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5000 2625 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 4800 2700 50  0001 L CNN
+	1    4800 2700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2500 4700 2400
+$Comp
+L power:GND #PWR?
+U 1 1 62078EE3
+P 4700 2900
+F 0 "#PWR?" H 4700 2650 50  0001 C CNN
+F 1 "GND" H 4705 2727 50  0000 C CNN
+F 2 "" H 4700 2900 50  0001 C CNN
+F 3 "" H 4700 2900 50  0001 C CNN
+	1    4700 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2700 5300 2700
+Text GLabel 6300 3800 2    50   Input ~ 0
+I_IN
+Text GLabel 6300 3700 2    50   Input ~ 0
+VIN_BUF
+Text GLabel 6300 3600 2    50   Input ~ 0
+IOUTBUF
+Text GLabel 6300 3500 2    50   Input ~ 0
+VOUTBUF
+Text GLabel 5300 3500 0    50   Input ~ 0
+M_CS0
+Text GLabel 5300 3400 0    50   Input ~ 0
+M_CS1
+Text GLabel 5300 3300 0    50   Input ~ 0
+M_LDAC0
+Text GLabel 5300 3200 0    50   Input ~ 0
+M_LDAC1
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 6207EF55
+P 4300 2500
+F 0 "SW?" H 4300 2735 50  0000 C CNN
+F 1 "EN" H 4300 2644 50  0000 C CNN
+F 2 "" H 4300 2500 50  0001 C CNN
+F 3 "~" H 4300 2500 50  0001 C CNN
+	1    4300 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2500 4500 2500
+Connection ~ 4700 2500
+Wire Wire Line
+	4100 2500 4100 2900
+Wire Wire Line
+	4100 2900 4700 2900
+Connection ~ 4700 2900
+$Comp
+L Display_Character:RC1602A U?
+U 1 1 620811D6
+P 9350 3400
+F 0 "U?" H 9350 4281 50  0000 C CNN
+F 1 "RC1602A" H 9350 4190 50  0000 C CNN
+F 2 "Display:RC1602A" H 9450 2600 50  0001 C CNN
+F 3 "http://www.raystar-optronics.com/down.php?ProID=18" H 9450 3300 50  0001 C CNN
+	1    9350 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 3200 8250 3200
+Wire Wire Line
+	8500 3300 8250 3300
+Text Label 8500 3200 2    50   ~ 0
+DISP0
+Text Label 8500 3300 2    50   ~ 0
+DISP1
+Text Label 8500 3400 2    50   ~ 0
+DISP2
+Wire Wire Line
+	8700 3500 8950 3500
+Wire Wire Line
+	8950 3400 8700 3400
+Text Label 8700 3400 0    50   ~ 0
+DISP2
+Text Label 8700 3500 0    50   ~ 0
+DISP3
+Wire Wire Line
+	8950 3200 8700 3200
+Wire Wire Line
+	8950 3300 8700 3300
+Text Label 8700 3200 0    50   ~ 0
+DISP0
+Text Label 8700 3300 0    50   ~ 0
+DISP1
+Wire Wire Line
+	8950 3600 8700 3600
+Wire Wire Line
+	8950 3700 8700 3700
+Wire Wire Line
+	8950 3800 8700 3800
+Wire Wire Line
+	8950 3900 8700 3900
+Text Label 8700 3600 0    50   ~ 0
+DISP4
+Text Label 8700 3700 0    50   ~ 0
+DISP5
+Text Label 8700 3800 0    50   ~ 0
+DISP6
+Text Label 8700 3900 0    50   ~ 0
+DISP7
+$Comp
+L Transistor_FET:IRF7404 Q?
+U 1 1 6207C806
+P 8000 1750
+F 0 "Q?" H 8205 1796 50  0000 L CNN
+F 1 "IRF7425" H 8205 1705 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8200 1675 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/irf7404.pdf?fileId=5546d462533600a4015355fa2b5b1b9e" V 8000 1750 50  0001 L CNN
+	1    8000 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 6207E020
+P 8300 1950
+F 0 "J?" H 8328 1926 50  0000 L CNN
+F 1 "FAN" H 8328 1835 50  0000 L CNN
+F 2 "" H 8300 1950 50  0001 C CNN
+F 3 "~" H 8300 1950 50  0001 C CNN
+	1    8300 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6207EA45
+P 8100 1450
+F 0 "#PWR?" H 8100 1300 50  0001 C CNN
+F 1 "+5V" H 8115 1623 50  0000 C CNN
+F 2 "" H 8100 1450 50  0001 C CNN
+F 3 "" H 8100 1450 50  0001 C CNN
+	1    8100 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7002 Q?
+U 1 1 620823E3
+P 7450 1950
+F 0 "Q?" H 7655 1996 50  0000 L CNN
+F 1 "2N7002" H 7655 1905 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7650 1875 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 7450 1950 50  0001 L CNN
+	1    7450 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 1750 7800 1750
+Wire Wire Line
+	8100 2050 8100 2300
+Wire Wire Line
+	8100 2300 7550 2300
+Wire Wire Line
+	7550 2300 7550 2150
+Wire Wire Line
+	6300 3000 6550 3000
+Text Label 6550 3000 2    50   ~ 0
+FAN
+Wire Wire Line
+	7250 1950 7200 1950
+Text Label 6700 1950 0    50   ~ 0
+FAN
+$Comp
+L Device:R R?
+U 1 1 6208DAEF
+P 7200 2100
+F 0 "R?" H 7250 2100 50  0000 L CNN
+F 1 "10K" V 7200 2100 50  0000 C CNN
+F 2 "" V 7130 2100 50  0001 C CNN
+F 3 "~" H 7200 2100 50  0001 C CNN
+	1    7200 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 1950 6700 1950
+$Comp
+L Device:R R?
+U 1 1 6208EF38
+P 7050 1950
+F 0 "R?" V 7150 1950 50  0000 C CNN
+F 1 "100R" V 7050 1950 50  0000 C CNN
+F 2 "" V 6980 1950 50  0001 C CNN
+F 3 "~" H 7050 1950 50  0001 C CNN
+	1    7050 1950
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7200 1950
+Wire Wire Line
+	7200 2250 7200 2300
+Wire Wire Line
+	7200 2300 7550 2300
+Connection ~ 7550 2300
+$Comp
+L Device:R R?
+U 1 1 62092B81
+P 7550 1600
+F 0 "R?" H 7600 1600 50  0000 L CNN
+F 1 "10K" V 7550 1600 50  0000 C CNN
+F 2 "" V 7480 1600 50  0001 C CNN
+F 3 "~" H 7550 1600 50  0001 C CNN
+	1    7550 1600
+	1    0    0    -1  
+$EndComp
+Connection ~ 7550 1750
+Wire Wire Line
+	7550 1450 8100 1450
+Connection ~ 8100 1450
+Wire Wire Line
+	8100 1450 8100 1550
+$Comp
+L 74xx:74HC595 U?
+U 1 1 62096F8C
+P 7850 3600
+F 0 "U?" H 7850 4381 50  0000 C CNN
+F 1 "74HC595" H 7850 4290 50  0000 C CNN
+F 2 "" H 7850 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 7850 3600 50  0001 C CNN
+	1    7850 3600
+	1    0    0    -1  
+$EndComp
+Text Label 8500 3900 2    50   ~ 0
+DISP7
+Text Label 8500 3800 2    50   ~ 0
+DISP6
+Text Label 8500 3700 2    50   ~ 0
+DISP5
+Text Label 8500 3600 2    50   ~ 0
+DISP4
+Wire Wire Line
+	8500 3900 8250 3900
+Wire Wire Line
+	8500 3800 8250 3800
+Wire Wire Line
+	8500 3700 8250 3700
+Wire Wire Line
+	8500 3600 8250 3600
+Wire Wire Line
+	8250 3400 8500 3400
+Text Label 8500 3500 2    50   ~ 0
+DISP3
+Wire Wire Line
+	8500 3500 8250 3500
+$Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 620A0B03
+P 5550 5000
+F 0 "SW?" H 5550 5367 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 5550 5276 50  0000 C CNN
+F 2 "" H 5400 5160 50  0001 C CNN
+F 3 "~" H 5550 5260 50  0001 C CNN
+	1    5550 5000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
