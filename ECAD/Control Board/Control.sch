@@ -215,14 +215,14 @@ F 3 "http://www.raystar-optronics.com/down.php?ProID=18" H 9450 3300 50  0001 C 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8500 3200 8250 3200
+	8500 2900 8250 2900
 Wire Wire Line
-	8500 3300 8250 3300
-Text Label 8500 3200 2    50   ~ 0
+	8500 3000 8250 3000
+Text Label 8500 2900 2    50   ~ 0
 DISP0
-Text Label 8500 3300 2    50   ~ 0
+Text Label 8500 3000 2    50   ~ 0
 DISP1
-Text Label 8500 3400 2    50   ~ 0
+Text Label 8500 3100 2    50   ~ 0
 DISP2
 Wire Wire Line
 	8700 3500 8950 3500
@@ -366,36 +366,36 @@ Wire Wire Line
 $Comp
 L 74xx:74HC595 U?
 U 1 1 62096F8C
-P 7850 3600
-F 0 "U?" H 7850 4381 50  0000 C CNN
-F 1 "74HC595" H 7850 4290 50  0000 C CNN
-F 2 "" H 7850 3600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 7850 3600 50  0001 C CNN
-	1    7850 3600
+P 7850 3300
+F 0 "U?" H 7850 4081 50  0000 C CNN
+F 1 "74HC595" H 7850 3990 50  0000 C CNN
+F 2 "" H 7850 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 7850 3300 50  0001 C CNN
+	1    7850 3300
 	1    0    0    -1  
 $EndComp
-Text Label 8500 3900 2    50   ~ 0
-DISP7
-Text Label 8500 3800 2    50   ~ 0
-DISP6
-Text Label 8500 3700 2    50   ~ 0
-DISP5
 Text Label 8500 3600 2    50   ~ 0
+DISP7
+Text Label 8500 3500 2    50   ~ 0
+DISP6
+Text Label 8500 3400 2    50   ~ 0
+DISP5
+Text Label 8500 3300 2    50   ~ 0
 DISP4
-Wire Wire Line
-	8500 3900 8250 3900
-Wire Wire Line
-	8500 3800 8250 3800
-Wire Wire Line
-	8500 3700 8250 3700
 Wire Wire Line
 	8500 3600 8250 3600
 Wire Wire Line
-	8250 3400 8500 3400
-Text Label 8500 3500 2    50   ~ 0
+	8500 3500 8250 3500
+Wire Wire Line
+	8500 3400 8250 3400
+Wire Wire Line
+	8500 3300 8250 3300
+Wire Wire Line
+	8250 3100 8500 3100
+Text Label 8500 3200 2    50   ~ 0
 DISP3
 Wire Wire Line
-	8500 3500 8250 3500
+	8500 3200 8250 3200
 $Comp
 L Device:Rotary_Encoder_Switch SW?
 U 1 1 620A0B03
@@ -407,4 +407,99 @@ F 3 "~" H 5550 5260 50  0001 C CNN
 	1    5550 5000
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	8700 3000 8950 3000
+Wire Wire Line
+	8950 2900 8700 2900
+Text Label 8700 3000 0    50   ~ 0
+RW
+Text Label 8700 2900 0    50   ~ 0
+RS
+Wire Wire Line
+	8600 3100 8600 2700
+Wire Wire Line
+	8600 2700 7850 2700
+Wire Wire Line
+	8600 3100 8950 3100
+Wire Wire Line
+	8600 2700 9350 2700
+Connection ~ 8600 2700
+Wire Wire Line
+	7850 4000 7850 4100
+Wire Wire Line
+	7850 4100 8600 4100
+Wire Wire Line
+	9750 3200 9850 3200
+Wire Wire Line
+	9850 3200 9850 2700
+Wire Wire Line
+	9850 2700 9350 2700
+Connection ~ 9350 2700
+Wire Wire Line
+	9750 3700 9850 3700
+$Comp
+L Device:R R?
+U 1 1 6208E94C
+P 9850 3350
+F 0 "R?" V 9950 3350 50  0000 C CNN
+F 1 "220R" V 9850 3350 50  0000 C CNN
+F 2 "" V 9780 3350 50  0001 C CNN
+F 3 "~" H 9850 3350 50  0001 C CNN
+	1    9850 3350
+	1    0    0    -1  
+$EndComp
+Connection ~ 9850 3200
+Wire Wire Line
+	9850 3700 9850 3500
+Wire Wire Line
+	9750 3600 9800 3600
+Wire Wire Line
+	9800 3600 9800 4100
+Wire Wire Line
+	9800 4100 9350 4100
+Connection ~ 9350 4100
+$Comp
+L power:GND #PWR?
+U 1 1 62093C2C
+P 8600 4100
+F 0 "#PWR?" H 8600 3850 50  0001 C CNN
+F 1 "GND" H 8605 3927 50  0000 C CNN
+F 2 "" H 8600 4100 50  0001 C CNN
+F 3 "" H 8600 4100 50  0001 C CNN
+	1    8600 4100
+	1    0    0    -1  
+$EndComp
+Connection ~ 8600 4100
+Wire Wire Line
+	8600 4100 9350 4100
+$Comp
+L power:+5V #PWR?
+U 1 1 6209452C
+P 8600 2700
+F 0 "#PWR?" H 8600 2550 50  0001 C CNN
+F 1 "+5V" H 8615 2873 50  0000 C CNN
+F 2 "" H 8600 2700 50  0001 C CNN
+F 3 "" H 8600 2700 50  0001 C CNN
+	1    8600 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 62095008
+P 10100 2850
+F 0 "C?" H 10215 2896 50  0000 L CNN
+F 1 "0.1uF" H 10215 2805 50  0000 L CNN
+F 2 "" H 10138 2700 50  0001 C CNN
+F 3 "~" H 10100 2850 50  0001 C CNN
+	1    10100 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 2700 9850 2700
+Connection ~ 9850 2700
+Wire Wire Line
+	9800 4100 10100 4100
+Wire Wire Line
+	10100 4100 10100 3000
+Connection ~ 9800 4100
 $EndSCHEMATC
