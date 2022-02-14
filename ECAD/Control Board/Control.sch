@@ -502,4 +502,43 @@ Wire Wire Line
 Wire Wire Line
 	10100 4100 10100 3000
 Connection ~ 9800 4100
+Text GLabel 5300 2600 0    50   Input ~ 0
+MOSI2
+Text GLabel 5300 2400 0    50   Input ~ 0
+SCK2
+Text GLabel 5300 2300 0    50   Input ~ 0
+LTCH2
+Text GLabel 7450 3100 0    50   Input ~ 0
+MOSI2
+Text GLabel 7450 2900 0    50   Input ~ 0
+SCK2
+Text GLabel 7450 3400 0    50   Input ~ 0
+LTCH2
+Wire Wire Line
+	7450 3500 7350 3500
+Wire Wire Line
+	7350 3500 7350 4100
+Wire Wire Line
+	7350 4100 7850 4100
+Connection ~ 7850 4100
+Wire Wire Line
+	7450 3200 7150 3200
+Wire Wire Line
+	7150 3200 7150 2700
+Wire Wire Line
+	7150 2700 7850 2700
+Connection ~ 7850 2700
+NoConn ~ 6300 3200
+NoConn ~ 5300 2500
+$Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 620AA3D9
+P 5550 5700
+F 0 "SW?" H 5550 6067 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 5550 5976 50  0000 C CNN
+F 2 "" H 5400 5860 50  0001 C CNN
+F 3 "~" H 5550 5960 50  0001 C CNN
+	1    5550 5700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
