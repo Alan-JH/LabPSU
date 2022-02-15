@@ -408,19 +408,17 @@ F 3 "~" H 5550 5260 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8700 3000 8950 3000
+	8700 3100 8950 3100
 Wire Wire Line
 	8950 2900 8700 2900
-Text Label 8700 3000 0    50   ~ 0
-RW
+Text Label 8700 3100 0    50   ~ 0
+E
 Text Label 8700 2900 0    50   ~ 0
 RS
 Wire Wire Line
-	8600 3100 8600 2700
-Wire Wire Line
 	8600 2700 7850 2700
 Wire Wire Line
-	8600 3100 8950 3100
+	8600 3000 8950 3000
 Wire Wire Line
 	8600 2700 9350 2700
 Connection ~ 8600 2700
@@ -429,28 +427,10 @@ Wire Wire Line
 Wire Wire Line
 	7850 4100 8600 4100
 Wire Wire Line
-	9750 3200 9850 3200
-Wire Wire Line
-	9850 3200 9850 2700
-Wire Wire Line
 	9850 2700 9350 2700
 Connection ~ 9350 2700
 Wire Wire Line
 	9750 3700 9850 3700
-$Comp
-L Device:R R?
-U 1 1 6208E94C
-P 9850 3350
-F 0 "R?" V 9950 3350 50  0000 C CNN
-F 1 "220R" V 9850 3350 50  0000 C CNN
-F 2 "" V 9780 3350 50  0001 C CNN
-F 3 "~" H 9850 3350 50  0001 C CNN
-	1    9850 3350
-	1    0    0    -1  
-$EndComp
-Connection ~ 9850 3200
-Wire Wire Line
-	9850 3700 9850 3500
 Wire Wire Line
 	9750 3600 9800 3600
 Wire Wire Line
@@ -541,4 +521,31 @@ F 3 "~" H 5550 5960 50  0001 C CNN
 	1    5550 5700
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	9850 2700 9850 3700
+$Comp
+L Device:R_POT_TRIM RV?
+U 1 1 620B7C18
+P 10450 3200
+F 0 "RV?" H 10380 3154 50  0000 R CNN
+F 1 "10K" V 10450 3200 50  0000 C CNN
+F 2 "" H 10450 3200 50  0001 C CNN
+F 3 "~" H 10450 3200 50  0001 C CNN
+	1    10450 3200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10450 3050 10450 2700
+Connection ~ 10100 2700
+Wire Wire Line
+	10100 4100 10450 4100
+Wire Wire Line
+	10450 4100 10450 3350
+Connection ~ 10100 4100
+Wire Wire Line
+	10450 2700 10100 2700
+Wire Wire Line
+	10300 3200 9750 3200
+Wire Wire Line
+	8600 4100 8600 3000
 $EndSCHEMATC
