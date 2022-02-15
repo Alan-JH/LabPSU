@@ -215,32 +215,6 @@ F 3 "http://www.raystar-optronics.com/down.php?ProID=18" H 9450 3300 50  0001 C 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8500 2900 8250 2900
-Wire Wire Line
-	8500 3000 8250 3000
-Text Label 8500 2900 2    50   ~ 0
-DISP0
-Text Label 8500 3000 2    50   ~ 0
-DISP1
-Text Label 8500 3100 2    50   ~ 0
-DISP2
-Wire Wire Line
-	8700 3500 8950 3500
-Wire Wire Line
-	8950 3400 8700 3400
-Text Label 8700 3400 0    50   ~ 0
-DISP2
-Text Label 8700 3500 0    50   ~ 0
-DISP3
-Wire Wire Line
-	8950 3200 8700 3200
-Wire Wire Line
-	8950 3300 8700 3300
-Text Label 8700 3200 0    50   ~ 0
-DISP0
-Text Label 8700 3300 0    50   ~ 0
-DISP1
-Wire Wire Line
 	8950 3600 8700 3600
 Wire Wire Line
 	8950 3700 8700 3700
@@ -390,29 +364,19 @@ Wire Wire Line
 	8500 3400 8250 3400
 Wire Wire Line
 	8500 3300 8250 3300
-Wire Wire Line
-	8250 3100 8500 3100
-Text Label 8500 3200 2    50   ~ 0
-DISP3
-Wire Wire Line
-	8500 3200 8250 3200
 $Comp
 L Device:Rotary_Encoder_Switch SW?
 U 1 1 620A0B03
-P 5550 5000
-F 0 "SW?" H 5550 5367 50  0000 C CNN
-F 1 "Rotary_Encoder_Switch" H 5550 5276 50  0000 C CNN
-F 2 "" H 5400 5160 50  0001 C CNN
-F 3 "~" H 5550 5260 50  0001 C CNN
-	1    5550 5000
+P 3450 3150
+F 0 "SW?" H 3450 3517 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 3450 3426 50  0000 C CNN
+F 2 "" H 3300 3310 50  0001 C CNN
+F 3 "~" H 3450 3410 50  0001 C CNN
+	1    3450 3150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8700 3100 8950 3100
-Wire Wire Line
 	8950 2900 8700 2900
-Text Label 8700 3100 0    50   ~ 0
-E
 Text Label 8700 2900 0    50   ~ 0
 RS
 Wire Wire Line
@@ -513,12 +477,12 @@ NoConn ~ 5300 2500
 $Comp
 L Device:Rotary_Encoder_Switch SW?
 U 1 1 620AA3D9
-P 5550 5700
-F 0 "SW?" H 5550 6067 50  0000 C CNN
-F 1 "Rotary_Encoder_Switch" H 5550 5976 50  0000 C CNN
-F 2 "" H 5400 5860 50  0001 C CNN
-F 3 "~" H 5550 5960 50  0001 C CNN
-	1    5550 5700
+P 3450 3850
+F 0 "SW?" H 3450 4217 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 3450 4126 50  0000 C CNN
+F 2 "" H 3300 4010 50  0001 C CNN
+F 3 "~" H 3450 4110 50  0001 C CNN
+	1    3450 3850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -527,7 +491,7 @@ $Comp
 L Device:R_POT_TRIM RV?
 U 1 1 620B7C18
 P 10450 3200
-F 0 "RV?" H 10380 3154 50  0000 R CNN
+F 0 "RV?" H 10400 3200 50  0000 R CNN
 F 1 "10K" V 10450 3200 50  0000 C CNN
 F 2 "" H 10450 3200 50  0001 C CNN
 F 3 "~" H 10450 3200 50  0001 C CNN
@@ -548,4 +512,42 @@ Wire Wire Line
 	10300 3200 9750 3200
 Wire Wire Line
 	8600 4100 8600 3000
+Wire Wire Line
+	8250 3000 8500 3000
+Text Label 8500 3000 2    50   ~ 0
+RS
+Text Label 8700 3100 0    50   ~ 0
+E
+Wire Wire Line
+	8700 3100 8950 3100
+Text Label 8500 3100 2    50   ~ 0
+E
+Wire Wire Line
+	8500 3100 8250 3100
+NoConn ~ 8950 3200
+NoConn ~ 8950 3300
+NoConn ~ 8950 3400
+NoConn ~ 8950 3500
+$Comp
+L Switch:SW_Push SW?
+U 1 1 620D0CDE
+P 3450 2500
+F 0 "SW?" H 3450 2785 50  0000 C CNN
+F 1 "SW_Push" H 3450 2694 50  0000 C CNN
+F 2 "" H 3450 2700 50  0001 C CNN
+F 3 "~" H 3450 2700 50  0001 C CNN
+	1    3450 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 620D1AF5
+P 3450 2050
+F 0 "SW?" H 3450 2335 50  0000 C CNN
+F 1 "SW_Push" H 3450 2244 50  0000 C CNN
+F 2 "" H 3450 2250 50  0001 C CNN
+F 3 "~" H 3450 2250 50  0001 C CNN
+	1    3450 2050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
