@@ -1106,23 +1106,6 @@ Wire Wire Line
 	6650 6900 7000 6900
 Text Notes 8250 4850 0    50   ~ 0
 Feedback Scale uC
-Wire Wire Line
-	11150 2900 11250 2900
-$Comp
-L Amplifier_Current:INA286 U13
-U 1 1 61E926B9
-P 11150 2600
-F 0 "U13" H 11494 2646 50  0000 L CNN
-F 1 "INA286" H 11494 2555 50  0000 L CNN
-F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 11150 2600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ina282.pdf" H 11150 2600 50  0001 C CNN
-	1    11150 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11150 2900 11050 2900
-Connection ~ 11150 2900
-Connection ~ 11050 2900
 $Comp
 L power:+3.3V #PWR0119
 U 1 1 620AC47D
@@ -1498,7 +1481,6 @@ F 3 "" H 11050 2300 50  0001 C CNN
 	1    11050 2300
 	1    0    0    -1  
 $EndComp
-Connection ~ 11050 2300
 $Comp
 L power:+5V #PWR0125
 U 1 1 6224BE47
@@ -2228,4 +2210,16 @@ Wire Wire Line
 Connection ~ 9800 1750
 Wire Wire Line
 	9800 1750 11550 1750
+$Comp
+L Amplifier_Current:INA138 U13
+U 1 1 620D99B9
+P 11150 2600
+F 0 "U13" H 11494 2646 50  0000 L CNN
+F 1 "INA180A3" H 11494 2555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 11150 2600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ina138.pdf" H 11150 2605 50  0001 C CNN
+	1    11150 2600
+	1    0    0    -1  
+$EndComp
+Connection ~ 11050 2300
 $EndSCHEMATC
