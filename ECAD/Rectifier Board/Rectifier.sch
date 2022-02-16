@@ -243,4 +243,15 @@ F 3 "" H 7400 4950 50  0001 C CNN
 	1    7400 4950
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:L L?
+U 1 1 620C462E
+P 6600 2600
+F 0 "L?" V 6790 2600 50  0000 C CNN
+F 1 "L" V 6699 2600 50  0000 C CNN
+F 2 "" H 6600 2600 50  0001 C CNN
+F 3 "~" H 6600 2600 50  0001 C CNN
+	1    6600 2600
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
