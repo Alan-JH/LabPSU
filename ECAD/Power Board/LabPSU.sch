@@ -250,8 +250,8 @@ $Comp
 L Device:C C25
 U 1 1 61C04621
 P 7350 2000
-F 0 "C25" V 7300 1850 50  0000 L CNN
-F 1 "0.1uF" V 7400 1750 50  0000 L CNN
+F 0 "C25" V 7300 1950 50  0000 R CNN
+F 1 "0.1uF" V 7400 1950 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 7388 1850 50  0001 C CNN
 F 3 "~" H 7350 2000 50  0001 C CNN
 	1    7350 2000
@@ -962,12 +962,12 @@ Wire Wire Line
 Text Label 10150 5350 0    50   ~ 0
 LDAC
 Wire Wire Line
-	9200 5750 9450 5750
-Text Label 9450 5750 2    50   ~ 0
+	8000 5650 7750 5650
+Text Label 7750 5650 0    50   ~ 0
 CS0
 Wire Wire Line
-	9200 5850 9450 5850
-Text Label 9450 5850 2    50   ~ 0
+	8000 5550 7750 5550
+Text Label 7750 5550 0    50   ~ 0
 LDAC
 Wire Wire Line
 	10900 5050 10000 5050
@@ -1031,8 +1031,6 @@ F 3 "~" H 9600 5200 50  0001 C CNN
 	1    9600 5200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9600 5350 9600 6450
 Connection ~ 9600 5050
 Connection ~ 9600 6450
 Wire Wire Line
@@ -1521,48 +1519,13 @@ F 3 "" H 7650 4500 50  0001 C CNN
 	1    7650 4500
 	1    0    0    -1  
 $EndComp
-$Comp
-L Analog_ADC:MCP3204 U7
-U 1 1 62324CED
-P 6100 6000
-F 0 "U7" H 6150 6450 50  0000 L CNN
-F 1 "MCP3204" H 6150 6350 50  0000 L CNN
-F 2 "Package_SO:SO-16_3.9x9.9mm_P1.27mm" H 7000 5700 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21298c.pdf" H 7000 5700 50  0001 C CNN
-	1    6100 6000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9200 5550 9450 5550
 Text Label 9450 5550 2    50   ~ 0
 MISO
 Wire Wire Line
-	6950 5900 6700 5900
-Text Label 6950 5900 2    50   ~ 0
-SCK
-Wire Wire Line
-	6700 6000 6950 6000
-Text Label 6950 6000 2    50   ~ 0
-MISO
-Wire Wire Line
-	6700 6100 6950 6100
-Text Label 6950 6100 2    50   ~ 0
-MOSI
-Wire Wire Line
-	6700 6200 6950 6200
-Text Label 6950 6200 2    50   ~ 0
-CS1
-Wire Wire Line
-	9200 5950 9450 5950
-Text Label 9450 5950 2    50   ~ 0
-CS1
-Wire Wire Line
-	5500 6100 5150 6100
-Wire Wire Line
-	5500 6200 5150 6200
-Text Label 5150 6100 0    50   ~ 0
-VOUTSET
-Text Label 5150 6200 0    50   ~ 0
+	9200 5850 9550 5850
+Text Label 9550 5850 2    50   ~ 0
 IOUTSET
 Wire Wire Line
 	7350 4350 7000 4350
@@ -1583,76 +1546,6 @@ F 3 "" H 6500 4950 50  0001 C CNN
 	1    6500 4950
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR0129
-U 1 1 62434071
-P 6000 6500
-F 0 "#PWR0129" H 6000 6250 50  0001 C CNN
-F 1 "GND" H 6005 6327 50  0000 C CNN
-F 2 "" H 6000 6500 50  0001 C CNN
-F 3 "" H 6000 6500 50  0001 C CNN
-	1    6000 6500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0130
-U 1 1 6244D378
-P 6000 5600
-F 0 "#PWR0130" H 6000 5450 50  0001 C CNN
-F 1 "+5V" H 6015 5773 50  0000 C CNN
-F 2 "" H 6000 5600 50  0001 C CNN
-F 3 "" H 6000 5600 50  0001 C CNN
-	1    6000 5600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6000 5600 6100 5600
-Connection ~ 6000 5600
-Wire Wire Line
-	6100 6500 6000 6500
-Connection ~ 6000 6500
-$Comp
-L Device:C C15
-U 1 1 6249CD51
-P 4800 5750
-F 0 "C15" H 4915 5796 50  0000 L CNN
-F 1 "0.1uF" H 4915 5705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 4838 5600 50  0001 C CNN
-F 3 "~" H 4800 5750 50  0001 C CNN
-	1    4800 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C12
-U 1 1 6249CD57
-P 4350 5750
-F 0 "C12" H 4465 5796 50  0000 L CNN
-F 1 "10uF" H 4465 5705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 4388 5600 50  0001 C CNN
-F 3 "~" H 4350 5750 50  0001 C CNN
-	1    4350 5750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6000 5600 4800 5600
-Connection ~ 4800 5600
-Wire Wire Line
-	4800 5600 4350 5600
-Wire Wire Line
-	4350 5900 4350 6500
-Wire Wire Line
-	4350 6500 4800 6500
-Connection ~ 5700 6500
-Wire Wire Line
-	5700 6500 5800 6500
-Connection ~ 5800 6500
-Wire Wire Line
-	5800 6500 6000 6500
-Wire Wire Line
-	4800 5900 4800 6500
-Connection ~ 4800 6500
-Wire Wire Line
-	4800 6500 5700 6500
 $Comp
 L Device:C C21
 U 1 1 624E568D
@@ -1766,9 +1659,9 @@ Text GLabel 3200 4400 2    50   Input ~ 0
 IOUTBUF
 Text GLabel 3200 4500 2    50   Input ~ 0
 VOUTBUF
-Text GLabel 5500 6000 0    50   Input ~ 0
+Text GLabel 9200 6050 2    50   Input ~ 0
 IOUTBUF
-Text GLabel 5500 5900 0    50   Input ~ 0
+Text GLabel 9200 5950 2    50   Input ~ 0
 VOUTBUF
 Text GLabel 8250 3850 2    50   Input ~ 0
 IOUTBUF
@@ -2266,4 +2159,10 @@ F 3 "" H 1000 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 1000 4850
+Wire Wire Line
+	9600 5350 9600 6450
+Text Label 9550 5750 2    50   ~ 0
+VOUTSET
+Wire Wire Line
+	9200 5750 9550 5750
 $EndSCHEMATC
