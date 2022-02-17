@@ -1,9 +1,9 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.1.9)-1")
+(kicad_pcb (version 20171130) (host pcbnew "(5.1.10)-1")
 
   (general
     (thickness 1.6)
     (drawings 0)
-    (tracks 0)
+    (tracks 9)
     (zones 0)
     (modules 91)
     (nets 54)
@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.25)
+    (last_trace_width 0.508)
     (user_trace_width 0.254)
     (user_trace_width 0.381)
     (user_trace_width 0.508)
@@ -1981,7 +1981,7 @@
   )
 
   (module Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical (layer F.Cu) (tedit 59FED5CC) (tstamp 620B4B74)
-    (at 165.1 124.46)
+    (at 105.918 122.428)
     (descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x03 2.54mm single row")
     (path /62058CB1)
@@ -3640,7 +3640,7 @@
   )
 
   (module Capacitor_SMD:C_0805_2012Metric (layer F.Cu) (tedit 5F68FEEE) (tstamp 620B46CD)
-    (at 117.095 148.692)
+    (at 133.096 151.892)
     (descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /627296EF)
@@ -3784,7 +3784,7 @@
   )
 
   (module Capacitor_SMD:C_0805_2012Metric (layer F.Cu) (tedit 5F68FEEE) (tstamp 620B4667)
-    (at 111.76 150.241)
+    (at 119.888 151.638)
     (descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /62782CEF)
@@ -4142,5 +4142,15 @@
       (rotate (xyz 0 0 0))
     )
   )
+
+  (segment (start 75.758 54.864) (end 71.374 54.864) (width 1.27) (layer F.Cu) (net 5))
+  (segment (start 165.161 70.993) (end 169.672 70.993) (width 1.27) (layer F.Cu) (net 16))
+  (segment (start 88.712 141.859) (end 84.328 141.859) (width 1.27) (layer F.Cu) (net 17))
+  (segment (start 167.574 151.765) (end 171.958 151.765) (width 1.27) (layer F.Cu) (net 18))
+  (segment (start 149.5025 118.999) (end 151.2335 118.999) (width 0.508) (layer F.Cu) (net 53))
+  (segment (start 151.124 118.8895) (end 151.2335 118.999) (width 0.508) (layer F.Cu) (net 53))
+  (segment (start 151.124 115.205) (end 151.124 118.8895) (width 0.508) (layer F.Cu) (net 53))
+  (segment (start 149.54 119.0365) (end 149.5025 118.999) (width 0.508) (layer F.Cu) (net 53))
+  (segment (start 149.54 122.301) (end 149.54 119.0365) (width 0.508) (layer F.Cu) (net 53))
 
 )
