@@ -65,12 +65,8 @@ M_SCK
 Text GLabel 1850 3600 2    50   Input ~ 0
 M_MOSI
 Text GLabel 1850 3700 2    50   Input ~ 0
-M_CS0
-Text GLabel 1850 3800 2    50   Input ~ 0
 M_CS1
-Text GLabel 1850 3900 2    50   Input ~ 0
-M_LDAC0
-Text GLabel 1850 4000 2    50   Input ~ 0
+Text GLabel 1850 3800 2    50   Input ~ 0
 M_LDAC1
 $Comp
 L power:GND #PWR?
@@ -176,13 +172,9 @@ Text GLabel 6300 3600 2    50   Input ~ 0
 IOUTBUF
 Text GLabel 6300 3500 2    50   Input ~ 0
 VOUTBUF
-Text GLabel 5300 3500 0    50   Input ~ 0
-M_CS0
 Text GLabel 5300 3400 0    50   Input ~ 0
 M_CS1
 Text GLabel 5300 3300 0    50   Input ~ 0
-M_LDAC0
-Text GLabel 5300 3200 0    50   Input ~ 0
 M_LDAC1
 $Comp
 L Switch:SW_SPST SW?
@@ -539,4 +531,12 @@ F 3 "~" H 3850 3650 50  0001 C CNN
 	1    3850 3450
 	1    0    0    -1  
 $EndComp
+Text GLabel 1850 3900 2    50   Input ~ 0
+SCL
+Text GLabel 1850 4000 2    50   Input ~ 0
+SDA
+Text GLabel 5300 3800 0    50   Input ~ 0
+SCL
+Text GLabel 5300 3900 0    50   Input ~ 0
+SDA
 $EndSCHEMATC
