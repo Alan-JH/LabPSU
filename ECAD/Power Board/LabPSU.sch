@@ -1116,70 +1116,16 @@ F 3 "" H 7000 6800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0115
-U 1 1 6201D975
-P 1650 3750
-F 0 "#PWR0115" H 1650 3500 50  0001 C CNN
-F 1 "GND" H 1655 3577 50  0000 C CNN
-F 2 "" H 1650 3750 50  0001 C CNN
-F 3 "" H 1650 3750 50  0001 C CNN
-	1    1650 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C3
-U 1 1 6219AA34
-P 1000 3300
-F 0 "C3" H 1115 3346 50  0000 L CNN
-F 1 "10uF" H 1115 3255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1038 3150 50  0001 C CNN
-F 3 "~" H 1000 3300 50  0001 C CNN
-	1    1000 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VBUS #PWR0108
-U 1 1 6205EA4F
-P 1000 3150
-F 0 "#PWR0108" H 1000 3000 50  0001 C CNN
-F 1 "VBUS" H 1015 3323 50  0000 C CNN
-F 2 "" H 1000 3150 50  0001 C CNN
-F 3 "" H 1000 3150 50  0001 C CNN
-	1    1000 3150
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR0106
 U 1 1 61E04B9D
-P 2350 3150
-F 0 "#PWR0106" H 2350 3000 50  0001 C CNN
-F 1 "+5V" H 2365 3323 50  0000 C CNN
-F 2 "" H 2350 3150 50  0001 C CNN
-F 3 "" H 2350 3150 50  0001 C CNN
-	1    2350 3150
+P 2600 3350
+F 0 "#PWR0106" H 2600 3200 50  0001 C CNN
+F 1 "+5V" H 2615 3523 50  0000 C CNN
+F 2 "" H 2600 3350 50  0001 C CNN
+F 3 "" H 2600 3350 50  0001 C CNN
+	1    2600 3350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2350 3150 2050 3150
-Connection ~ 2350 3150
-$Comp
-L Device:C C5
-U 1 1 61DF44B7
-P 2350 3300
-F 0 "C5" H 2465 3346 50  0000 L CNN
-F 1 "1uF" H 2465 3255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 2388 3150 50  0001 C CNN
-F 3 "~" H 2350 3300 50  0001 C CNN
-	1    2350 3300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1650 3750 2050 3750
-Wire Wire Line
-	1000 3750 1650 3750
-Connection ~ 1000 3150
-Wire Wire Line
-	1000 3150 1350 3150
 $Comp
 L Device:R R3
 U 1 1 6210BD08
@@ -1269,17 +1215,14 @@ Wire Wire Line
 $Comp
 L Connector:TestPoint TP2
 U 1 1 620B05C9
-P 2050 3150
-F 0 "TP2" H 2108 3268 50  0000 L CNN
-F 1 "5V" H 2108 3177 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_2.5x2.5mm" H 2250 3150 50  0001 C CNN
-F 3 "~" H 2250 3150 50  0001 C CNN
-	1    2050 3150
+P 1950 3350
+F 0 "TP2" H 2008 3468 50  0000 L CNN
+F 1 "5V" H 2008 3377 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.5x2.5mm" H 2150 3350 50  0001 C CNN
+F 3 "~" H 2150 3350 50  0001 C CNN
+	1    1950 3350
 	1    0    0    -1  
 $EndComp
-Connection ~ 2050 3150
-Wire Wire Line
-	2050 3150 1950 3150
 $Comp
 L Connector:TestPoint TP3
 U 1 1 620C420C
@@ -1950,62 +1893,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/ina138.pdf" H 11150 2605 50  0001 C CNN
 $EndComp
 Connection ~ 11050 2300
 $Comp
-L Regulator_Linear:LM317_TO-220 U1
-U 1 1 620E5A74
-P 1650 3150
-F 0 "U1" H 1650 3392 50  0000 C CNN
-F 1 "LM317_TO-220" H 1650 3301 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 1650 3400 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 1650 3150 50  0001 C CNN
-	1    1650 3150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1650 3450 2050 3450
-$Comp
-L Device:C C36
-U 1 1 62174A29
-P 2050 3600
-F 0 "C36" H 2165 3646 50  0000 L CNN
-F 1 "1uF" H 2165 3555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 2088 3450 50  0001 C CNN
-F 3 "~" H 2050 3600 50  0001 C CNN
-	1    2050 3600
-	1    0    0    -1  
-$EndComp
-Connection ~ 1650 3750
-Connection ~ 2050 3750
-Wire Wire Line
-	2050 3750 2350 3750
-Wire Wire Line
-	1000 3450 1000 3750
-Wire Wire Line
-	2350 3750 2350 3450
-$Comp
-L Device:R R13
-U 1 1 621DFD58
-P 1650 3600
-F 0 "R13" H 1700 3600 50  0000 L CNN
-F 1 "3K" V 1650 3600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1580 3600 50  0001 C CNN
-F 3 "~" H 1650 3600 50  0001 C CNN
-	1    1650 3600
-	1    0    0    -1  
-$EndComp
-Connection ~ 1650 3450
-$Comp
-L Device:R R14
-U 1 1 62203725
-P 2050 3300
-F 0 "R14" H 2100 3300 50  0000 L CNN
-F 1 "1K" V 2050 3300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1980 3300 50  0001 C CNN
-F 3 "~" H 2050 3300 50  0001 C CNN
-	1    2050 3300
-	1    0    0    -1  
-$EndComp
-Connection ~ 2050 3450
-$Comp
 L power:+5V #PWR0107
 U 1 1 62239165
 P 1000 4850
@@ -2150,4 +2037,124 @@ Wire Wire Line
 Connection ~ 4350 3850
 Wire Wire Line
 	4350 3850 4600 3850
+$Comp
+L Regulator_Switching:LM2594HVN-5.0 U?
+U 1 1 6213CE1A
+P 1450 3450
+F 0 "U?" H 1450 3817 50  0000 C CNN
+F 1 "LM2594HVN-5.0" H 1450 3726 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 1650 3200 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2594.pdf" H 1450 3550 50  0001 C CNN
+	1    1450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 6213B97A
+P 2250 3450
+F 0 "L?" V 2400 3450 50  0000 C CNN
+F 1 "150uH" V 2300 3450 50  0000 C CNN
+F 2 "" H 2250 3450 50  0001 C CNN
+F 3 "~" H 2250 3450 50  0001 C CNN
+	1    2250 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_Schottky D?
+U 1 1 6213D4AF
+P 1950 3600
+F 0 "D?" V 1904 3680 50  0000 L CNN
+F 1 "D_Schottky" V 1995 3680 50  0000 L CNN
+F 2 "" H 1950 3600 50  0001 C CNN
+F 3 "~" H 1950 3600 50  0001 C CNN
+	1    1950 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 6213F072
+P 650 3600
+F 0 "C?" H 768 3646 50  0000 L CNN
+F 1 "100uF" H 768 3555 50  0000 L CNN
+F 2 "" H 688 3450 50  0001 C CNN
+F 3 "~" H 650 3600 50  0001 C CNN
+	1    650  3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 62141608
+P 2600 3600
+F 0 "C?" H 2718 3646 50  0000 L CNN
+F 1 "220uF" H 2718 3555 50  0000 L CNN
+F 2 "" H 2638 3450 50  0001 C CNN
+F 3 "~" H 2600 3600 50  0001 C CNN
+	1    2600 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 3450 1050 3750
+Wire Wire Line
+	1050 3750 1250 3750
+Connection ~ 1250 3750
+Wire Wire Line
+	1250 3750 1350 3750
+Connection ~ 1350 3750
+Wire Wire Line
+	1350 3750 1450 3750
+Connection ~ 1450 3750
+Wire Wire Line
+	1450 3750 1650 3750
+Wire Wire Line
+	1050 3750 650  3750
+Connection ~ 1050 3750
+Wire Wire Line
+	650  3450 650  3350
+Wire Wire Line
+	650  3350 1050 3350
+Wire Wire Line
+	1850 3450 1950 3450
+Connection ~ 1950 3450
+Wire Wire Line
+	1950 3450 2100 3450
+Wire Wire Line
+	2400 3450 2600 3450
+Wire Wire Line
+	2600 3450 2600 3350
+Wire Wire Line
+	2600 3350 1950 3350
+Connection ~ 2600 3450
+Wire Wire Line
+	1650 3750 1950 3750
+Connection ~ 1650 3750
+Connection ~ 1950 3750
+Wire Wire Line
+	1950 3750 2600 3750
+$Comp
+L power:GND #PWR?
+U 1 1 621DAE5F
+P 1650 3750
+F 0 "#PWR?" H 1650 3500 50  0001 C CNN
+F 1 "GND" H 1655 3577 50  0000 C CNN
+F 2 "" H 1650 3750 50  0001 C CNN
+F 3 "" H 1650 3750 50  0001 C CNN
+	1    1650 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR?
+U 1 1 621DCE04
+P 650 3350
+F 0 "#PWR?" H 650 3200 50  0001 C CNN
+F 1 "VBUS" H 665 3523 50  0000 C CNN
+F 2 "" H 650 3350 50  0001 C CNN
+F 3 "" H 650 3350 50  0001 C CNN
+	1    650  3350
+	1    0    0    -1  
+$EndComp
+Connection ~ 650  3350
+Connection ~ 2600 3350
+Connection ~ 1950 3350
+Wire Wire Line
+	1950 3350 1850 3350
 $EndSCHEMATC
