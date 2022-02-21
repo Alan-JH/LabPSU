@@ -321,4 +321,15 @@ F 3 "https://www.onsemi.com/pub/Collateral/NCP1380-D.PDF" H 6450 4750 50  0001 C
 	1    6450 4750
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:Transformer_1P_2S T?
+U 1 1 6213DB4F
+P 9150 5050
+F 0 "T?" H 9150 4425 50  0000 C CNN
+F 1 "Transformer_1P_2S" H 9150 4516 50  0000 C CNN
+F 2 "" H 9150 5050 50  0001 C CNN
+F 3 "~" H 9150 5050 50  0001 C CNN
+	1    9150 5050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
