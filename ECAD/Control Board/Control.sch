@@ -14,69 +14,46 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Conn_01x14_Male J?
-U 1 1 62052A04
-P 1650 3400
-F 0 "J?" H 1758 4181 50  0000 C CNN
-F 1 "CTRL" H 1758 4090 50  0000 C CNN
-F 2 "" H 1650 3400 50  0001 C CNN
-F 3 "~" H 1650 3400 50  0001 C CNN
-	1    1650 3400
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR?
 U 1 1 62054280
-P 1950 2800
-F 0 "#PWR?" H 1950 2650 50  0001 C CNN
-F 1 "+5V" H 1965 2973 50  0000 C CNN
-F 2 "" H 1950 2800 50  0001 C CNN
-F 3 "" H 1950 2800 50  0001 C CNN
-	1    1950 2800
+P 1300 2450
+F 0 "#PWR?" H 1300 2300 50  0001 C CNN
+F 1 "+5V" H 1315 2623 50  0000 C CNN
+F 2 "" H 1300 2450 50  0001 C CNN
+F 3 "" H 1300 2450 50  0001 C CNN
+	1    1300 2450
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR?
 U 1 1 62054B41
-P 2100 2900
-F 0 "#PWR?" H 2100 2750 50  0001 C CNN
-F 1 "+3.3V" H 2115 3073 50  0000 C CNN
-F 2 "" H 2100 2900 50  0001 C CNN
-F 3 "" H 2100 2900 50  0001 C CNN
-	1    2100 2900
+P 1450 2550
+F 0 "#PWR?" H 1450 2400 50  0001 C CNN
+F 1 "+3.3V" H 1465 2723 50  0000 C CNN
+F 2 "" H 1450 2550 50  0001 C CNN
+F 3 "" H 1450 2550 50  0001 C CNN
+	1    1450 2550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1950 2800 1850 2800
+	1300 2450 1200 2450
 Wire Wire Line
-	1850 2900 2100 2900
-Text GLabel 1850 3000 2    50   Input ~ 0
-I_IN
-Text GLabel 1850 3100 2    50   Input ~ 0
-VIN_BUF
-Text GLabel 1850 3200 2    50   Input ~ 0
+	1200 2550 1450 2550
+Text GLabel 1200 2650 2    50   Input ~ 0
 IOUTBUF
-Text GLabel 1850 3300 2    50   Input ~ 0
+Text GLabel 1200 2750 2    50   Input ~ 0
 VOUTBUF
-Text GLabel 1850 3400 2    50   Input ~ 0
+Text GLabel 1200 2850 2    50   Input ~ 0
 EN
-Text GLabel 1850 3500 2    50   Input ~ 0
-M_SCK
-Text GLabel 1850 3600 2    50   Input ~ 0
-M_MOSI
-Text GLabel 1850 3700 2    50   Input ~ 0
-M_CS1
-Text GLabel 1850 3800 2    50   Input ~ 0
-M_LDAC1
 $Comp
 L power:GND #PWR?
 U 1 1 6205654B
-P 1850 4100
-F 0 "#PWR?" H 1850 3850 50  0001 C CNN
-F 1 "GND" H 1855 3927 50  0000 C CNN
-F 2 "" H 1850 4100 50  0001 C CNN
-F 3 "" H 1850 4100 50  0001 C CNN
-	1    1850 4100
+P 1200 3150
+F 0 "#PWR?" H 1200 2900 50  0001 C CNN
+F 1 "GND" H 1205 2977 50  0000 C CNN
+F 2 "" H 1200 3150 50  0001 C CNN
+F 3 "" H 1200 3150 50  0001 C CNN
+	1    1200 3150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -132,10 +109,6 @@ F 3 "" H 5100 4100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5100 4100 5300 4100
-Text GLabel 6300 3300 2    50   Input ~ 0
-M_SCK
-Text GLabel 6300 3100 2    50   Input ~ 0
-M_MOSI
 Text GLabel 4700 2400 0    50   Input ~ 0
 EN
 $Comp
@@ -165,17 +138,9 @@ $EndComp
 Wire Wire Line
 	5000 2700 5300 2700
 Text GLabel 6300 3800 2    50   Input ~ 0
-I_IN
-Text GLabel 6300 3700 2    50   Input ~ 0
-VIN_BUF
-Text GLabel 6300 3600 2    50   Input ~ 0
 IOUTBUF
-Text GLabel 6300 3500 2    50   Input ~ 0
+Text GLabel 6300 3700 2    50   Input ~ 0
 VOUTBUF
-Text GLabel 5300 3400 0    50   Input ~ 0
-M_CS1
-Text GLabel 5300 3300 0    50   Input ~ 0
-M_LDAC1
 $Comp
 L Switch:SW_SPST SW?
 U 1 1 6207EF55
@@ -428,17 +393,17 @@ Wire Wire Line
 	10100 4100 10100 3000
 Connection ~ 9800 4100
 Text GLabel 5300 2600 0    50   Input ~ 0
-MOSI2
+MOSI
 Text GLabel 5300 2400 0    50   Input ~ 0
-SCK2
+SCK
 Text GLabel 5300 2300 0    50   Input ~ 0
-LTCH2
+LTCH
 Text GLabel 7450 3100 0    50   Input ~ 0
-MOSI2
+MOSI
 Text GLabel 7450 2900 0    50   Input ~ 0
-SCK2
+SCK
 Text GLabel 7450 3400 0    50   Input ~ 0
-LTCH2
+LTCH
 Wire Wire Line
 	7450 3500 7350 3500
 Wire Wire Line
@@ -453,7 +418,6 @@ Wire Wire Line
 Wire Wire Line
 	7150 2700 7850 2700
 Connection ~ 7850 2700
-NoConn ~ 6300 3200
 NoConn ~ 5300 2500
 $Comp
 L Device:Rotary_Encoder_Switch SW?
@@ -531,12 +495,23 @@ F 3 "~" H 3850 3650 50  0001 C CNN
 	1    3850 3450
 	1    0    0    -1  
 $EndComp
-Text GLabel 1850 3900 2    50   Input ~ 0
+Text GLabel 1200 2950 2    50   Input ~ 0
 SCL
-Text GLabel 1850 4000 2    50   Input ~ 0
+Text GLabel 1200 3050 2    50   Input ~ 0
 SDA
 Text GLabel 5300 3800 0    50   Input ~ 0
 SCL
 Text GLabel 5300 3900 0    50   Input ~ 0
 SDA
+$Comp
+L Connector:Conn_01x08_Male J?
+U 1 1 6213E32B
+P 1000 2750
+F 0 "J?" H 1108 3231 50  0000 C CNN
+F 1 "CTRL" H 1108 3140 50  0000 C CNN
+F 2 "" H 1000 2750 50  0001 C CNN
+F 3 "~" H 1000 2750 50  0001 C CNN
+	1    1000 2750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
