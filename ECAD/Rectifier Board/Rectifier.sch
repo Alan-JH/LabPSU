@@ -40,7 +40,7 @@ L Connector:Screw_Terminal_01x02 J?
 U 1 1 62058FC8
 P 2150 3000
 F 0 "J?" H 2068 2675 50  0000 C CNN
-F 1 "25VAC" H 2068 2766 50  0000 C CNN
+F 1 "120VAC" H 2068 2766 50  0000 C CNN
 F 2 "" H 2150 3000 50  0001 C CNN
 F 3 "~" H 2150 3000 50  0001 C CNN
 	1    2150 3000
@@ -83,87 +83,6 @@ F 3 "" H 3300 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:LM317_TO-220 U?
-U 1 1 6205D4E8
-P 5050 2900
-F 0 "U?" H 5050 3142 50  0000 C CNN
-F 1 "LM317_TO-220" H 5050 3051 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5050 3150 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 5050 2900 50  0001 C CNN
-	1    5050 2900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 6205E083
-P 5050 3350
-F 0 "R?" H 5100 3350 50  0000 L CNN
-F 1 "11K" V 5050 3350 50  0000 C CNN
-F 2 "" V 4980 3350 50  0001 C CNN
-F 3 "~" H 5050 3350 50  0001 C CNN
-	1    5050 3350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 6205F378
-P 5500 3050
-F 0 "R?" H 5550 3050 50  0000 L CNN
-F 1 "1K" V 5500 3050 50  0000 C CNN
-F 2 "" V 5430 3050 50  0001 C CNN
-F 3 "~" H 5500 3050 50  0001 C CNN
-	1    5500 3050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5050 3200 5500 3200
-Connection ~ 5050 3200
-Wire Wire Line
-	5500 2900 5350 2900
-$Comp
-L Device:C C?
-U 1 1 6205FE8A
-P 5800 3050
-F 0 "C?" H 5915 3096 50  0000 L CNN
-F 1 "1uF" H 5915 3005 50  0000 L CNN
-F 2 "" H 5838 2900 50  0001 C CNN
-F 3 "~" H 5800 3050 50  0001 C CNN
-	1    5800 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 620613FC
-P 5500 3350
-F 0 "C?" H 5615 3396 50  0000 L CNN
-F 1 "1uF" H 5615 3305 50  0000 L CNN
-F 2 "" H 5538 3200 50  0001 C CNN
-F 3 "~" H 5500 3350 50  0001 C CNN
-	1    5500 3350
-	1    0    0    -1  
-$EndComp
-Connection ~ 5500 3200
-Wire Wire Line
-	5800 3500 5800 3200
-Wire Wire Line
-	5800 2900 5500 2900
-Connection ~ 5500 2900
-$Comp
-L Device:C C?
-U 1 1 620625CD
-P 4400 3050
-F 0 "C?" H 4515 3096 50  0000 L CNN
-F 1 "1uF" H 4515 3005 50  0000 L CNN
-F 2 "" H 4438 2900 50  0001 C CNN
-F 3 "~" H 4400 3050 50  0001 C CNN
-	1    4400 3050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4400 3500 4400 3200
-Wire Wire Line
-	4750 2900 4400 2900
-$Comp
 L Device:CP C?
 U 1 1 62063BAE
 P 3950 3000
@@ -179,24 +98,8 @@ Wire Wire Line
 Connection ~ 3300 2150
 Wire Wire Line
 	3950 3500 3950 3150
-Wire Wire Line
-	3950 2150 4400 2150
 Connection ~ 3950 2150
-Wire Wire Line
-	3950 3500 4400 3500
 Connection ~ 3950 3500
-$Comp
-L power:+15V #PWR?
-U 1 1 6206D11A
-P 5800 2900
-F 0 "#PWR?" H 5800 2750 50  0001 C CNN
-F 1 "+15V" H 5815 3073 50  0000 C CNN
-F 2 "" H 5800 2900 50  0001 C CNN
-F 3 "" H 5800 2900 50  0001 C CNN
-	1    5800 2900
-	1    0    0    -1  
-$EndComp
-Connection ~ 5800 2900
 $Comp
 L power:+15V #PWR?
 U 1 1 6206D895
@@ -326,9 +229,6 @@ Connection ~ 6250 3500
 Wire Wire Line
 	6650 3500 6750 3500
 Wire Wire Line
-	4400 2150 4400 2900
-Connection ~ 4400 2900
-Wire Wire Line
 	3950 2150 3950 2850
 Wire Wire Line
 	3300 2150 3300 2950
@@ -385,19 +285,6 @@ Wire Wire Line
 	8400 2600 8400 3500
 Wire Wire Line
 	8400 3500 7500 3500
-Connection ~ 4400 2150
-Connection ~ 4400 3500
-Connection ~ 5050 3500
-Connection ~ 5500 3500
-Connection ~ 5800 3500
-Wire Wire Line
-	5050 3500 5500 3500
-Wire Wire Line
-	5500 3500 5800 3500
-Wire Wire Line
-	4400 3500 5050 3500
-Wire Wire Line
-	5800 3500 6050 3500
 $Comp
 L Device:CP C?
 U 1 1 621098C4
@@ -410,8 +297,6 @@ F 3 "~" H 6050 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4400 2150 6050 2150
-Wire Wire Line
 	6050 2300 6050 2150
 Connection ~ 6050 2150
 Wire Wire Line
@@ -421,4 +306,19 @@ Wire Wire Line
 Connection ~ 6050 3500
 Wire Wire Line
 	6050 3500 6250 3500
+Wire Wire Line
+	3950 3500 6050 3500
+Wire Wire Line
+	3950 2150 6050 2150
+$Comp
+L Regulator_Controller:NCP1380C U?
+U 1 1 6212BD3D
+P 6450 4750
+F 0 "U?" H 6450 5331 50  0000 C CNN
+F 1 "NCP1380C" H 6450 5240 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6450 4750 50  0001 C CIN
+F 3 "https://www.onsemi.com/pub/Collateral/NCP1380-D.PDF" H 6450 4750 50  0001 C CNN
+	1    6450 4750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
