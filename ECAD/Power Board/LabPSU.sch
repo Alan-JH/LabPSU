@@ -345,8 +345,6 @@ Connection ~ 6950 2150
 Wire Wire Line
 	4950 2350 4950 2450
 Wire Wire Line
-	4850 2450 4850 2750
-Wire Wire Line
 	5750 2150 5850 2150
 $Comp
 L Transistor_FET:Si7336ADP Q2
@@ -1895,23 +1893,25 @@ F 3 "~" H 750 4350 50  0001 C CNN
 	1    750  4350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4650 3250 5350 3250
 $Comp
 L Device:Net-Tie_2 NT1
 U 1 1 62174037
-P 5350 3150
-F 0 "NT1" V 5304 3194 50  0000 L CNN
-F 1 "Kelvin Tie" V 5395 3194 50  0000 L CNN
-F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 5350 3150 50  0001 C CNN
-F 3 "~" H 5350 3150 50  0001 C CNN
-	1    5350 3150
+P 4850 2550
+F 0 "NT1" V 4804 2594 50  0000 L CNN
+F 1 "Kelvin Tie" V 4895 2594 50  0000 L CNN
+F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 4850 2550 50  0001 C CNN
+F 3 "~" H 4850 2550 50  0001 C CNN
+	1    4850 2550
 	0    1    1    0   
 $EndComp
+Connection ~ 5350 2750
+Wire Wire Line
+	4650 3250 5350 3250
+Wire Wire Line
+	5350 2750 5350 3250
 Connection ~ 5350 3250
 Wire Wire Line
 	5350 3250 5850 3250
 Wire Wire Line
-	5350 2750 5350 3050
-Connection ~ 5350 2750
+	4850 2650 4850 2750
 $EndSCHEMATC
