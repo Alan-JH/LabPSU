@@ -16,44 +16,31 @@ $EndDescr
 $Comp
 L power:+5V #PWR?
 U 1 1 62054280
-P 1300 2450
-F 0 "#PWR?" H 1300 2300 50  0001 C CNN
-F 1 "+5V" H 1315 2623 50  0000 C CNN
-F 2 "" H 1300 2450 50  0001 C CNN
-F 3 "" H 1300 2450 50  0001 C CNN
-	1    1300 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 62054B41
-P 1450 2550
-F 0 "#PWR?" H 1450 2400 50  0001 C CNN
-F 1 "+3.3V" H 1465 2723 50  0000 C CNN
-F 2 "" H 1450 2550 50  0001 C CNN
-F 3 "" H 1450 2550 50  0001 C CNN
-	1    1450 2550
+P 1650 2100
+F 0 "#PWR?" H 1650 1950 50  0001 C CNN
+F 1 "+5V" H 1665 2273 50  0000 C CNN
+F 2 "" H 1650 2100 50  0001 C CNN
+F 3 "" H 1650 2100 50  0001 C CNN
+	1    1650 2100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1300 2450 1200 2450
-Wire Wire Line
-	1200 2550 1450 2550
-Text GLabel 1200 2650 2    50   Input ~ 0
+	1650 2100 1550 2100
+Text GLabel 1550 2200 2    50   Input ~ 0
 IOUTBUF
-Text GLabel 1200 2750 2    50   Input ~ 0
+Text GLabel 1550 2300 2    50   Input ~ 0
 VOUTBUF
-Text GLabel 1200 2850 2    50   Input ~ 0
+Text GLabel 1550 2400 2    50   Input ~ 0
 EN
 $Comp
 L power:GND #PWR?
 U 1 1 6205654B
-P 1200 3150
-F 0 "#PWR?" H 1200 2900 50  0001 C CNN
-F 1 "GND" H 1205 2977 50  0000 C CNN
-F 2 "" H 1200 3150 50  0001 C CNN
-F 3 "" H 1200 3150 50  0001 C CNN
-	1    1200 3150
+P 1550 2700
+F 0 "#PWR?" H 1550 2450 50  0001 C CNN
+F 1 "GND" H 1555 2527 50  0000 C CNN
+F 2 "" H 1550 2700 50  0001 C CNN
+F 3 "" H 1550 2700 50  0001 C CNN
+	1    1550 2700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -495,23 +482,34 @@ F 3 "~" H 3850 3650 50  0001 C CNN
 	1    3850 3450
 	1    0    0    -1  
 $EndComp
-Text GLabel 1200 2950 2    50   Input ~ 0
+Text GLabel 1550 2500 2    50   Input ~ 0
 SCL
-Text GLabel 1200 3050 2    50   Input ~ 0
+Text GLabel 1550 2600 2    50   Input ~ 0
 SDA
-Text GLabel 5300 3800 0    50   Input ~ 0
+Text GLabel 2750 1750 0    50   Input ~ 0
 SCL
-Text GLabel 5300 3900 0    50   Input ~ 0
+Text GLabel 2750 1950 0    50   Input ~ 0
 SDA
 $Comp
-L Connector:Conn_01x08_Male J?
-U 1 1 6213E32B
-P 1000 2750
-F 0 "J?" H 1108 3231 50  0000 C CNN
-F 1 "CTRL" H 1108 3140 50  0000 C CNN
-F 2 "" H 1000 2750 50  0001 C CNN
-F 3 "~" H 1000 2750 50  0001 C CNN
-	1    1000 2750
+L Connector:Conn_01x07_Male J?
+U 1 1 62156A0D
+P 1350 2400
+F 0 "J?" H 1458 2881 50  0000 C CNN
+F 1 "CTRL" H 1458 2790 50  0000 C CNN
+F 2 "" H 1350 2400 50  0001 C CNN
+F 3 "~" H 1350 2400 50  0001 C CNN
+	1    1350 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_LevelTranslator:TXB0104D U?
+U 1 1 6216022C
+P 3350 2050
+F 0 "U?" H 3350 1261 50  0000 C CNN
+F 1 "TXB0104D" H 3350 1170 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3350 1300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0104.pdf" H 3460 2145 50  0001 C CNN
+	1    3350 2050
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
