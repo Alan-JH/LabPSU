@@ -970,17 +970,6 @@ Wire Wire Line
 Text Notes 3200 3750 0    50   ~ 0
 Digital Feedback Scaling
 $Comp
-L power:+3.3V #PWR021
-U 1 1 620BF9CE
-P 6050 6200
-F 0 "#PWR021" H 6050 6050 50  0001 C CNN
-F 1 "+3.3V" H 6065 6373 50  0000 C CNN
-F 2 "" H 6050 6200 50  0001 C CNN
-F 3 "" H 6050 6200 50  0001 C CNN
-	1    6050 6200
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR013
 U 1 1 61E04B9D
 P 2700 4100
@@ -1914,4 +1903,15 @@ Wire Wire Line
 	5350 3250 5850 3250
 Wire Wire Line
 	4850 2650 4850 2750
+$Comp
+L power:+5V #PWR?
+U 1 1 621E6D69
+P 6050 6200
+F 0 "#PWR?" H 6050 6050 50  0001 C CNN
+F 1 "+5V" H 6065 6373 50  0000 C CNN
+F 2 "" H 6050 6200 50  0001 C CNN
+F 3 "" H 6050 6200 50  0001 C CNN
+	1    6050 6200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
