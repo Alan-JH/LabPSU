@@ -389,7 +389,6 @@ F 3 "~" H 5150 2950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Connection ~ 5350 2450
-Connection ~ 5350 2750
 Wire Wire Line
 	4550 2650 4650 2650
 Wire Wire Line
@@ -447,13 +446,6 @@ F 3 "~" H 7250 4050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4550 2250 5050 2250
-Wire Wire Line
-	4650 3250 5350 3250
-Connection ~ 5350 3250
-Wire Wire Line
-	5350 3250 5850 3250
-Wire Wire Line
-	5350 2750 5350 3250
 $Comp
 L Device:R R15
 U 1 1 61C130DF
@@ -1903,4 +1895,23 @@ F 3 "~" H 750 4350 50  0001 C CNN
 	1    750  4350
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4650 3250 5350 3250
+$Comp
+L Device:Net-Tie_2 NT1
+U 1 1 62174037
+P 5350 3150
+F 0 "NT1" V 5304 3194 50  0000 L CNN
+F 1 "Kelvin Tie" V 5395 3194 50  0000 L CNN
+F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 5350 3150 50  0001 C CNN
+F 3 "~" H 5350 3150 50  0001 C CNN
+	1    5350 3150
+	0    1    1    0   
+$EndComp
+Connection ~ 5350 3250
+Wire Wire Line
+	5350 3250 5850 3250
+Wire Wire Line
+	5350 2750 5350 3050
+Connection ~ 5350 2750
 $EndSCHEMATC
