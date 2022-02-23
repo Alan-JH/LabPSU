@@ -1466,17 +1466,6 @@ F 3 "~" H 2050 4350 50  0001 C CNN
 	1    2050 4350
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:CP C8
-U 1 1 62141608
-P 2700 4350
-F 0 "C8" H 2818 4396 50  0000 L CNN
-F 1 "220uF" H 2818 4305 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 2738 4200 50  0001 C CNN
-F 3 "~" H 2700 4350 50  0001 C CNN
-	1    2700 4350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1150 4200 1150 4500
 Wire Wire Line
@@ -1665,4 +1654,15 @@ Wire Wire Line
 Connection ~ 4050 5050
 Wire Wire Line
 	4050 5050 4500 5050
+$Comp
+L Device:CP C8
+U 1 1 62141608
+P 2700 4350
+F 0 "C8" H 2818 4396 50  0000 L CNN
+F 1 "220uF" H 2818 4305 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 2738 4200 50  0001 C CNN
+F 3 "~" H 2700 4350 50  0001 C CNN
+	1    2700 4350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
