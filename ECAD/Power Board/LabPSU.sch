@@ -1393,18 +1393,6 @@ Wire Wire Line
 Connection ~ 7350 1800
 Wire Wire Line
 	7350 1800 9100 1800
-$Comp
-L Amplifier_Current:INA138 U6
-U 1 1 620D99B9
-P 8700 2650
-F 0 "U6" H 9044 2696 50  0000 L CNN
-F 1 "INA180A3" H 9044 2605 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8700 2650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ina138.pdf" H 8700 2655 50  0001 C CNN
-	1    8700 2650
-	1    0    0    -1  
-$EndComp
-Connection ~ 8600 2350
 Wire Wire Line
 	6450 5350 6450 6450
 Text GLabel 3450 5350 0    50   Input ~ 0
@@ -1665,4 +1653,22 @@ F 3 "~" H 2700 4350 50  0001 C CNN
 	1    2700 4350
 	1    0    0    -1  
 $EndComp
+$Comp
+L Amplifier_Current:INA286 U6
+U 1 1 6218420A
+P 8700 2650
+F 0 "U6" H 9044 2696 50  0000 L CNN
+F 1 "INA286" H 9044 2605 50  0000 L CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 8700 2650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ina282.pdf" H 8700 2650 50  0001 C CNN
+	1    8700 2650
+	1    0    0    -1  
+$EndComp
+Connection ~ 8600 2350
+Wire Wire Line
+	8600 2950 8700 2950
+Connection ~ 8600 2950
+Connection ~ 8700 2950
+Wire Wire Line
+	8700 2950 8800 2950
 $EndSCHEMATC
