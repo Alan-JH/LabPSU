@@ -762,7 +762,7 @@ U 1 1 62167D22
 P 7750 5450
 F 0 "U5" H 8394 5496 50  0000 L CNN
 F 1 "MCP4811" H 8394 5405 50  0000 L CNN
-F 2 "Package_SO:MSOP-8_3x3mm_P0.65mm" H 8650 5350 50  0001 C CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 8650 5350 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/22244B.pdf" H 8650 5350 50  0001 C CNN
 	1    7750 5450
 	1    0    0    -1  
