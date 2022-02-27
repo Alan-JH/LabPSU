@@ -4,13 +4,13 @@ EELAYER END
 $Descr USLegal 14000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
-Comment3 ""
+Title "LabPSU Buck-Boost Adjust"
+Date "2022-02-27"
+Rev "1"
+Comp "Alan Hsu"
+Comment1 "Input 20-45V nominally"
+Comment2 "0-40V 0-9A output"
+Comment3 "Digital feedback scaling IC with i2c interface"
 Comment4 ""
 $EndDescr
 $Comp
