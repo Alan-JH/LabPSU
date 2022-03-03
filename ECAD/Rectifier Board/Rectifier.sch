@@ -25,22 +25,11 @@ F 3 "~" H 1600 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1600 1400 1100 1400
+	1600 1400 1200 1400
 Wire Wire Line
 	1100 2000 1600 2000
 Wire Wire Line
 	1300 1700 1300 2250
-$Comp
-L power:GND #PWR06
-U 1 1 6205A908
-P 5050 4200
-F 0 "#PWR06" H 5050 3950 50  0001 C CNN
-F 1 "GND" H 5055 4027 50  0000 C CNN
-F 2 "" H 5050 4200 50  0001 C CNN
-F 3 "" H 5050 4200 50  0001 C CNN
-	1    5050 4200
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:VCC #PWR01
 U 1 1 6205AED4
@@ -210,37 +199,13 @@ Wire Wire Line
 	2550 1350 2550 2250
 Wire Wire Line
 	2550 2250 2750 2250
-$Comp
-L Regulator_Controller:NCP1380C U1
-U 1 1 6212BD3D
-P 2600 4550
-F 0 "U1" H 2600 5131 50  0000 C CNN
-F 1 "NCP1380C" H 2600 5040 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2600 4550 50  0001 C CIN
-F 3 "https://www.onsemi.com/pub/Collateral/NCP1380-D.PDF" H 2600 4550 50  0001 C CNN
-	1    2600 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Transformer_1P_2S T1
-U 1 1 6213DB4F
-P 4050 4300
-F 0 "T1" H 4050 3675 50  0000 C CNN
-F 1 "Transformer_1P_2S" H 4050 3766 50  0000 C CNN
-F 2 "" H 4050 4300 50  0001 C CNN
-F 3 "~" H 4050 4300 50  0001 C CNN
-	1    4050 4300
-	1    0    0    -1  
-$EndComp
 Connection ~ 2550 2250
 Wire Wire Line
 	1100 1750 1100 2000
 Wire Wire Line
 	950  1750 1100 1750
 Wire Wire Line
-	1100 1400 1100 1650
-Wire Wire Line
-	1100 1650 950  1650
+	1200 1400 1200 1650
 $Comp
 L Connector:Screw_Terminal_01x02 J1
 U 1 1 62058FC8
@@ -252,39 +217,6 @@ F 3 "~" H 750 1750 50  0001 C CNN
 	1    750  1750
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5050 4200 4450 4200
-$Comp
-L power:GNDPWR #PWR04
-U 1 1 621C5C53
-P 4600 4700
-F 0 "#PWR04" H 4600 4500 50  0001 C CNN
-F 1 "GNDPWR" H 4604 4546 50  0000 C CNN
-F 2 "" H 4600 4650 50  0001 C CNN
-F 3 "" H 4600 4650 50  0001 C CNN
-	1    4600 4700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4600 4700 4450 4700
-Wire Wire Line
-	4450 4400 4600 4400
-Wire Wire Line
-	4450 3900 5050 3900
-$Comp
-L power:+36V #PWR05
-U 1 1 621C9846
-P 5050 3900
-F 0 "#PWR05" H 5050 3750 50  0001 C CNN
-F 1 "+36V" H 5065 4073 50  0000 C CNN
-F 2 "" H 5050 3900 50  0001 C CNN
-F 3 "" H 5050 3900 50  0001 C CNN
-	1    5050 3900
-	1    0    0    -1  
-$EndComp
-Connection ~ 5050 3900
-Wire Wire Line
-	5050 3900 6550 3900
 $Comp
 L Transistor_FET:C3M0065090D Q1
 U 1 1 621CE355
@@ -530,12 +462,35 @@ Wire Wire Line
 $Comp
 L Regulator_Controller:TL494 U?
 U 1 1 621DF2F3
-P 7950 4700
-F 0 "U?" H 7950 5581 50  0000 C CNN
-F 1 "TL494" H 7950 5490 50  0000 C CNN
-F 2 "" H 7950 4700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl494.pdf" H 7950 4700 50  0001 C CNN
-	1    7950 4700
+P 3600 3350
+F 0 "U?" H 3600 4231 50  0000 C CNN
+F 1 "TL494" H 3600 4140 50  0000 C CNN
+F 2 "" H 3600 3350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl494.pdf" H 3600 3350 50  0001 C CNN
+	1    3600 3350
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:Transformer_1P_1S T?
+U 1 1 62213AFD
+P 1700 2850
+F 0 "T?" H 1700 3231 50  0000 C CNN
+F 1 "Transformer_1P_1S" H 1700 3140 50  0000 C CNN
+F 2 "" H 1700 2850 50  0001 C CNN
+F 3 "~" H 1700 2850 50  0001 C CNN
+	1    1700 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 1650 1200 2650
+Wire Wire Line
+	1200 2650 1300 2650
+Wire Wire Line
+	1300 3050 1100 3050
+Wire Wire Line
+	1100 3050 1100 2000
+Connection ~ 1100 2000
+Connection ~ 1200 1650
+Wire Wire Line
+	950  1650 1200 1650
 $EndSCHEMATC
