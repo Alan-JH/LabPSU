@@ -3838,7 +3838,7 @@
     (property "Reference" "C?" (id 0) (at 243.84 26.6699 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (id 1) (at 243.84 29.2099 0)
+    (property "Value" "22nF" (id 1) (at 243.84 29.2099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "" (id 2) (at 240.9952 31.75 0)
@@ -4100,7 +4100,7 @@
     (in_bom yes) (on_board yes)
     (uuid 7b945a2a-77e0-4fb7-8bbc-c87bcae38960)
     (property "Reference" "R?" (id 0) (at 200.66 123.19 90))
-    (property "Value" "R" (id 1) (at 200.66 125.73 90))
+    (property "Value" "1K" (id 1) (at 200.66 125.73 90))
     (property "Footprint" "" (id 2) (at 200.66 127.508 90)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -4234,7 +4234,7 @@
     (property "Reference" "R?" (id 0) (at 215.9 102.87 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (id 1) (at 214.63 102.87 90))
+    (property "Value" "220R" (id 1) (at 214.63 102.87 90))
     (property "Footprint" "" (id 2) (at 212.852 102.87 90)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -4266,7 +4266,7 @@
     (property "Reference" "R?" (id 0) (at 233.68 27.94 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (id 1) (at 232.41 27.94 90))
+    (property "Value" "15K" (id 1) (at 232.41 27.94 90))
     (property "Footprint" "" (id 2) (at 230.632 27.94 90)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -4418,7 +4418,7 @@
     (in_bom yes) (on_board yes)
     (uuid df0a206c-ee22-4525-bc4b-b25f9de4e2a1)
     (property "Reference" "R?" (id 0) (at 218.44 73.66 90))
-    (property "Value" "R" (id 1) (at 218.44 76.2 90))
+    (property "Value" "220R" (id 1) (at 218.44 76.2 90))
     (property "Footprint" "" (id 2) (at 218.44 77.978 90)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -4548,7 +4548,7 @@
       (reference "C?") (unit 1) (value "1uF") (footprint "")
     )
     (path "/549764ec-3882-407d-9220-ed9d42854e74"
-      (reference "C?") (unit 1) (value "C") (footprint "")
+      (reference "C?") (unit 1) (value "22nF") (footprint "")
     )
     (path "/58d3a54e-57ff-46ab-8139-a031c1949b45"
       (reference "C?") (unit 1) (value "C") (footprint "")
@@ -4671,19 +4671,19 @@
       (reference "R?") (unit 1) (value "R") (footprint "")
     )
     (path "/7b945a2a-77e0-4fb7-8bbc-c87bcae38960"
-      (reference "R?") (unit 1) (value "R") (footprint "")
+      (reference "R?") (unit 1) (value "1K") (footprint "")
     )
     (path "/7e801041-5a0e-42d2-9687-326e2f6e485a"
       (reference "R?") (unit 1) (value "R") (footprint "")
     )
     (path "/9c3f7b92-20b4-4aba-9c2a-6718ee5c5f88"
-      (reference "R?") (unit 1) (value "R") (footprint "")
+      (reference "R?") (unit 1) (value "220R") (footprint "")
     )
     (path "/9fd9c4af-b403-47fb-b51e-b25bcc9a98c1"
       (reference "R?") (unit 1) (value "R") (footprint "")
     )
     (path "/a605dbc4-418f-4613-ae05-cb9a6dc046cd"
-      (reference "R?") (unit 1) (value "R") (footprint "")
+      (reference "R?") (unit 1) (value "15K") (footprint "")
     )
     (path "/b2b83193-b314-4d08-af2d-a2d87b4b0937"
       (reference "R?") (unit 1) (value "R") (footprint "")
@@ -4695,7 +4695,7 @@
       (reference "R?") (unit 1) (value "R") (footprint "")
     )
     (path "/df0a206c-ee22-4525-bc4b-b25f9de4e2a1"
-      (reference "R?") (unit 1) (value "R") (footprint "")
+      (reference "R?") (unit 1) (value "220R") (footprint "")
     )
     (path "/e652a55e-43e8-4f27-9dc8-5d1f2784c251"
       (reference "R?") (unit 1) (value "R") (footprint "")
