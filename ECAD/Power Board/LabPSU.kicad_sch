@@ -2,7 +2,7 @@
 
   (uuid 9dcdc92b-2219-4a4a-8954-45f02cc3ab25)
 
-  (paper "USLegal")
+  (paper "USLetter")
 
   (title_block
     (title "LabPSU Buck-Boost Adjust")
