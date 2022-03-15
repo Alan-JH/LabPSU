@@ -19,8 +19,8 @@ PORTA.OUTSET = (1 << LDAC);
 int v;
 int i;
 
-volatile float scalev;
-volatile float scalei;
+volatile float scalev = 100;
+volatile float scalei = 100;
 
 int dacout;
 
@@ -41,7 +41,8 @@ void setup() {
 
 void receiveISR(int len) {
   if (len == 4) {
-  
+    scalev = ((Wire.read() << 8) | Wire.read()) / 10000.0;
+    scalei = ((Wire.read() << 8) | Wire.read()) / 10000.0;
   }
 }
 
@@ -62,6 +63,7 @@ void loop() {
     VCC = measureVCC();
     tickcount = 0;
   }
+  tickcount++;
   v = analogRead(VIN); // Read in ADC
   i = analogRead(IIN); 
   
