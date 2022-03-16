@@ -67,7 +67,7 @@ void loop() {
   v = ( v * VCC / 4096 ) * 11 * scalev;
   i = ( ( i * VCC / 4096 ) / 1.36 ) * scalei;
 
-  dacout = int(max(v, i)) * 1024 / 4.096;
+  dacout = int(max(v, i) * 1024 / 4.096);
   
   // Process int for transfer to DAC
   if (dacout > 1023)
