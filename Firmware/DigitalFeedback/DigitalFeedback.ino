@@ -15,8 +15,8 @@
 float v;
 float i;
 
-volatile float scalev = 100;
-volatile float scalei = 100;
+volatile float scalev = 1;
+volatile float scalei = 0;
 
 int dacout;
 
@@ -24,14 +24,13 @@ float VCC = 5;
 
 int tickcount = -1;
 
-ADC0.SAMPCTRL = 2; // Decrease number of ADC clocks that the micro waits for. Default is 14. Should in theory reduce read time to 15us or so
-
 void setup() {
   pinMode(CS, OUTPUT);
   pinMode(LDAC, OUTPUT);
   digitalWriteFast(CS, HIGH);
   digitalWriteFast(LDAC, HIGH);
-  
+
+  analogSampleDuration(2); // Decrease number of ADC clocks that the micro waits for. Default is 14. Should in theory reduce read time to 15us or so
   analogReadResolution(ADC_NATIVE_RESOLUTION);
   
   Wire.begin(0x45); // Set up i2c as slave
@@ -50,9 +49,9 @@ void receiveISR(int len) {
 }
 
 float measureVCC() {
-  ADC0.SAMPCTRL = 14;
+  analogSampleDuration(14);
   uint16_t adc_reading = analogRead(ADC_DACREF0);
-  ADC0.SAMPCTRL = 2;
+  analogSampleDuration(2);
   return 4194.304/adc_reading;
 }
 
@@ -68,7 +67,7 @@ void loop() {
   v = ( v * VCC / 4096 ) * 11 * scalev;
   i = ( ( i * VCC / 4096 ) / 1.36 ) * scalei;
 
-  dacout = int(max(v, i));
+  dacout = int(max(v, i)) * 1024 / 4.096;
   
   // Process int for transfer to DAC
   if (dacout > 1023)
