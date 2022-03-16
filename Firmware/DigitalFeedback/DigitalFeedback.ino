@@ -2,12 +2,8 @@
 #include <Wire.h>
 
 // PORTA definitions
-#define CS 4
-#define LDAC 5
-
-PORTA.DIR = (1 << CS) | (1 << LDAC); // Port manipulation, setting high/low takes 2-3 ticks
-PORTA.OUTSET = (1 << CS);
-PORTA.OUTSET = (1 << LDAC);
+#define CS PIN_PA4
+#define LDAC PIN_PA5
 
 // ADC definitions
 #define VIN 2
@@ -31,6 +27,10 @@ int tickcount;
 ADC0.SAMPCTRL = 2; // Decrease number of ADC clocks that the micro waits for. Default is 14. Should in theory reduce read time to 15us or so
 
 void setup() {
+  pinMode(CS, OUTPUT);
+  pinMode(LDAC, OUTPUT);
+  digitalWriteFast(CS, HIGH);
+  digitalWriteFast(LDAC, HIGH);
   Wire.begin(0x45); // Set up i2c as slave
   Wire.onReceive(receiveISR);
   SPI.begin();
@@ -70,24 +70,24 @@ void loop() {
   v = ( v * VCC / 4096 ) * 11 * scalev;
   i = ( ( i * VCC / 4096 ) / 1.36 ) * scalei;
 
-  dacout = int(max(v, i))
+  dacout = int(max(v, i));
   
   // Process int for transfer to DAC
   if (dacout > 1023)
-    dacout = 1023
+    dacout = 1023;
   dacout = dacout << 2;
   dacout |= (0b0001 << 12);
 
-  PORTA.OUTCLR = (1 << CS); // CS Low
+  digitalWriteFast(CS, LOW); // CS Low
   NOP; // Provide some buffer time
   SPI.transfer(dacout >> 8);
   SPI.transfer(dacout & 0xff);
   NOP;
-  PORTA.OUTSET = (1 << CS); // CS High
+  digitalWriteFast(CS, HIGH); // CS High
   
-  PORTA.OUTCLR = (1 << LDAC); // Pulse LDAC pin to latch output
+  digitalWriteFast(LDAC, LOW); // Pulse LDAC pin to latch output
   NOP; // Delay 3 clock ticks = 150ns (100ns minimum for MCP4811)
   NOP;
   NOP;
-  PORTA.OUTSET = (1 << LDAC);
+  digitalWriteFast(LDAC, HIGH);
 }
