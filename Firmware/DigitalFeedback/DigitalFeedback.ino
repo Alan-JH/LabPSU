@@ -12,8 +12,8 @@
 // NOP
 #define NOP __asm__ __volatile__ ("nop\n\t");
 
-int v;
-int i;
+float v;
+float i;
 
 volatile float scalev = 100;
 volatile float scalei = 100;
@@ -22,7 +22,7 @@ int dacout;
 
 float VCC = 5;
 
-int tickcount;
+int tickcount = -1;
 
 ADC0.SAMPCTRL = 2; // Decrease number of ADC clocks that the micro waits for. Default is 14. Should in theory reduce read time to 15us or so
 
@@ -50,23 +50,18 @@ void receiveISR(int len) {
 }
 
 float measureVCC() {
-  VREF.CTRLA = VREF_ADC0REFSEL_1V1_gc;
   ADC0.SAMPCTRL = 14;
-  ADC0.MUXPOS = ADC_MUXPOS_INTREF_gc;                  // Measure INTREF
-  ADC0.CTRLA = ADC_ENABLE_bm; 
-  ADC0.COMMAND = ADC_STCONV_bm;                        // Start conversion
-  while (ADC0.COMMAND & ADC_STCONV_bm);                // Wait for completion
-  uint16_t adc_reading = ADC0.RES;                     // ADC conversion result
+  uint16_t adc_reading = analogRead(ADC_DACREF0);
   ADC0.SAMPCTRL = 2;
-  return 1126.4/adc_reading;
+  return 4194.304/adc_reading;
 }
 
 void loop() {
-  if (tickcount > 1000){
+  if (tickcount < 0){
     VCC = measureVCC();
-    tickcount = 0;
+    tickcount = 1000;
   }
-  tickcount++;
+  tickcount--;
   v = analogRead(VIN); // Read in ADC
   i = analogRead(IIN); 
   
