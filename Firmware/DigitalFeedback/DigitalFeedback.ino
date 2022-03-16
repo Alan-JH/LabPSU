@@ -31,6 +31,9 @@ void setup() {
   pinMode(LDAC, OUTPUT);
   digitalWriteFast(CS, HIGH);
   digitalWriteFast(LDAC, HIGH);
+  
+  analogReadResolution(ADC_NATIVE_RESOLUTION);
+  
   Wire.begin(0x45); // Set up i2c as slave
   Wire.onReceive(receiveISR);
   SPI.begin();
