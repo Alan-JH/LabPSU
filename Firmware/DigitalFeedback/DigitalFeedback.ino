@@ -15,7 +15,7 @@
 float v;
 float i;
 
-volatile float scalev = 1;
+volatile float scalev = .5;
 volatile float scalei = 0;
 
 int dacout;
@@ -30,7 +30,7 @@ void setup() {
   digitalWriteFast(CS, HIGH);
   digitalWriteFast(LDAC, HIGH);
 
-  analogSampleDuration(2); // Decrease number of ADC clocks that the micro waits for. Default is 14. Should in theory reduce read time to 15us or so
+  analogSampleDuration(6); // Decrease number of ADC clocks that the micro waits for. Default is 14.
   analogReadResolution(ADC_NATIVE_RESOLUTION);
   
   Wire.begin(0x45); // Set up i2c as slave
@@ -51,7 +51,7 @@ void receiveISR(int len) {
 float measureVCC() {
   analogSampleDuration(14);
   uint16_t adc_reading = analogRead(ADC_DACREF0);
-  analogSampleDuration(2);
+  analogSampleDuration(6);
   return 4194.304/adc_reading;
 }
 
